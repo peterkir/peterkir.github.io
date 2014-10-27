@@ -73,11 +73,10 @@
 			<section id="toc">
 				<h3>Table of contents</h3>
 				<ul>
-					<li style="color: blue;">Motivation</li>
+					<li>Motivation</li>
 					<li>Comparison PDE to bndtools</li>
 					<li>Development Setup & Update</li>
 					<li>Programming</li>
-					<li>Building & Assembly</li>
 					<li>Conclusion</li>
 				</ul>
 			</section>
@@ -316,7 +315,7 @@
 				</section>
 			</section>
 			<section>
-				<section id="development" data-markdown>
+				<section id="development_1" data-markdown>
 					### Development in "mixed-mode"
 
 					* After modifications on bnd bundles 
@@ -334,28 +333,20 @@
 						* open the appropriate source type with  
 							Ctrl+Shift+T and CamelCase notation
 				</section>
-			</section>
-			<section>
-				<section id="build_and_assembly" data-markdown>
-					### automated build and assembly
-					bnd projects can be build with ant
-					jars can be published as p2 repository
-					pde-build is consuming this p2 repository
-				</section>
-			</section>
-			<section>
-				<section id="conclusion_1" data-markdown>
+				<section id="development_2" data-markdown>
 					### Scripts/Tools created for suppporting the "mixed-mode" development
 					
 					* p2 repository mirroring with OBR indexing
 
 					* IDE bootstrap scripts mirror, install, launch templates
 
-					* build.BND2PDE -> builds PDE target including BND bundles
+					* bnd2pde -> p2 publishing and PDE target creation
 
-					* PDE TargetReloader Plug-in
+					* [PDE TargetReloader Plug-in](https://github.com/MKeck/pde.targetreloader)
 				</section>
-				<section id="conclusion_2" data-markdown>
+			</section>
+			<section>
+				<section id="conclusion" data-markdown>
 					### Conclusion
 					
 					* "mixed-mode" development is hard -&gt; try to migrate fast
@@ -431,6 +422,14 @@
 			<section id="BACKUP">
 				<section>
 					<h1>BACKUP</h1>
+				</section>
+				<section>
+					<section id="build_and_assembly" data-markdown>
+						### automated build and assembly
+						bnd projects can be build with ant
+						jars can be published as p2 repository
+						pde-build is consuming this p2 repository
+					</section>
 				</section>
 				<section data-markdown id="principles" data-notes="^Note:" >
 					### Development Principles
