@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>An epic split between OSGi tooling Eclipse PDE and bndtools - EclipseCon Europe 2014</title>
+
+	<meta name="description" content="An epic split between OSGi tooling Eclipse PDE and bndtools - EclipseCon Europe 2014 - presentation slides - explaining usage of Eclipse PDE and OSGi bnd bndtools usage">
+	<meta name="author" content="Peter Kirschner">
+
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+	<!-- For syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+
+	<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+	<script>
+		if( window.location.search.match( /print-pdf/gi ) ) {
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = 'css/print/pdf.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		}
+	</script>
+
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
+
+<body>
+
+	<div class="reveal">
+
+		<div class="slides">
+			<section id="title">
+				<h6>An epic split between OSGi tooling</h6>
+				<h3>Eclipse PDE and bndtools</h3>
+				<h6>experiences from a ongoing migration - started end of 2012</h6>
+				<a href="#/video_epic_split" alt="Volvo Trucks with Jean-Claude Van Damme">
+					<img src="images/Volvo-Trucks-The-Epic-Split6.jpg"  width="70%" alt="Volvo Trucks - Epic Split" /> 
+				</a>
+				<p>
+					<small>created by <a href="#/aboutme">Peter Kirschner</a> for <a href="https://www.eclipsecon.org/europe2014/">EclipseCon Europe 2014</a></small><br>
+				</p>
+				<tiny>
+					Seminarräume 1 - 3 - Wednesday, October 29, 2014 - 10:30 to 11:05<br>
+					copyright for Epic Split Theme is with Volvo Trucks<br>
+					<a href="?print-pdf">printable version</a>
+				</tiny>
+			</section>
+
+			<section id="aboutme" data-markdown>
+				### About me
+
+				![](images/PeterKirschner.jpg "Peter Kirschner")
+
+				* name: Peter Kirschner
+				* profession: IT software engineer
+				* email: &#112;e&#116;e&#114;&#064;&#107;&#105;&#114;&#115;&#099;&#104;&#110;e&#114;&#115;&#046;&#100;&#101;
+				* twitter: [@peterkir](http://twitter.com/peterkir)
+				* github: https://peterkir.github.io/
+			</section>
+
+			<section id="toc">
+				<h3>Table of contents</h3>
+				<ul>
+					<li style="color: blue;">Motivation</li>
+					<li>Comparison PDE to bndtools</li>
+					<li>Development Setup & Update</li>
+					<li>Programming</li>
+					<li>Building & Assembly</li>
+					<li>Conclusion</li>
+				</ul>
+			</section>
+
+			<section id="motivation">
+				<section id="motivation_1">
+					<h3>Why we want to use bndtools</h3>
+					<div style="position: relative;">
+<!--
+					<img src="images/text_really.png" style="position: absolute; top: 30px; left: 460px; border-style=solid; border:0px; background-color:#e4decd;"/>
+-->
+					<table>
+						<tr>
+							<td>automated import package analysis including versioning</td>
+							<td><img src="images/about01.png" alt="bndImportAnalysis" width="70%" /></td>
+						</tr>
+						<tr>
+							<td>powerful OSGi bundle repository management</td>
+							<td><img src="images/about02.png" alt="bndRepositoryManagement" width="70%"/></td>
+						</tr>
+						<tr>
+							<td>instant Jar bundle creation</td>
+							<td><img src="images/about04.png" alt="bndInstantJarBuilder" width="70%"/></td>
+						</tr>
+						<tr>
+							<td>annotation based Declarative Service implementation</td>
+							<td><img src="images/bndDeclarativeService.png" alt="bndDeclarativeService" width="70%"/></td>
+						</tr>
+					</table>
+					</div>
+				</section>
+				<section id="motivation_2" data-markdown>
+					### PDE issues and drawbacks
+					
+					* issues with "automated" import package in Plugin Editor
+					
+						* [73957 Correct plug-in dependencies result in invalid compile errors (was incomplete type hierarchy)](https://bugs.eclipse.org/bugs/show_bug.cgi?id=73957)
+
+					* workspace and target setup complex
+
+					* target reloading was error prone (since 4.3 much better)
+						
+					* launch configuration from PDE is adding fragments from workspace to the runtime
+				</section>
+			</section>
+
+			<section id="comparison">
+				<section id="comparison_0" data-markdown>
+					### Comparison of PDE and bndtools
+					
+					* Major differences
+
+					* Project Layouts
+
+					* IDE bundle handling
+				</section>
+				<section id="comparison_1">
+					<h3>Major differences</h3>
+					<table>
+						<tr>
+							<th>Topic</th>
+							<th>PDE</th>
+							<th>bndtools</th>
+						</tr>
+						<tr>
+							<td>project layout</td>
+							<td>single bundle from one eclipse project</td>
+							<td>single or multiple bundles from one project</td>
+						</tr>
+						<tr>
+							<td>target scope</td>
+							<td>complete workspace<br><code>*.target</code></td>
+							<td>per eclipse project<br><code>bnd.bnd</code></td>
+						</tr>
+						<tr>
+							<td>MANIFEST handling</td>
+							<td>manual attribute editor</td>
+							<td>many attributes automatically derived</td>
+						</tr>
+						<tr>
+							<td>project files</td>
+							<td><code>.project</code><br>
+							<code>.classpath</code><br>
+							</td>
+							<td>.</td>
+						</tr>
+					</table>
+				</section>
+				<section id="comparison_2" >
+					<h3>Project Layouts</h3>
+						<a href="#/video_epic_split" alt="Volvo Trucks with Jean-Claude Van Damme">
+							<img src="images/PackageExplorer_described.png"  width="32%" alt="Eclipse PackageExplorer View" /> 
+						</a>
+				</section>
+				<section id="comparison_3" data-markdown>
+					### IDE bundle handling
+					
+					*  PDE 
+
+						* creates "virtual bundles" for execution Launches
+
+						* PDE build/export required to create concrete jar files
+
+					*  bndtools  
+
+						* creates physical jar file inside generated folder
+						
+						* launches execute this jar file inside runtime
+				</section>
+			</section>
+
+			<section id="challenges">
+				<section id="challenges_0" data-markdown>
+					### Conflicting/overlapping areas 
+					
+					* project build path  
+
+					* project interdependencies  
+						
+						* PDE depends on BND  
+						* BND depends on PDE  
+
+					* compiler settings synchronization  
+
+					</section>
+				<section id="challenges_1" data-markdown>
+					### Project Build Path
+					
+					* PDE uses default runtime target or file-based target for complete workspace
+
+						* all workspace projects share a common target
+						
+						* higher complexity for import-packages
+						
+					* bndtools use project based build path from OBR repos
+						
+						* build path can be more specific for each project 
+
+						* reduced package import scope on project level
+						
+					* **Precise build path config feasible for bnd projects**
+				</section>
+				<section id="challenges_2" data-markdown>
+					### Project interdependencies: PDE -&gt;BND
+
+					* Easy option: JDT build path dependency via project
+
+						* Is only working in IDE but lacks package visibility view
+						
+					* **Eclipse Project dependencies are NO option for OSGi**
+
+					* **Real OSGi development can be achieved via JDT target**
+							
+						* BND project compiled to generated/bundle.jar
+						
+						* p2 publisher generates p2 repo from generated/bundle.jar files 
+						
+						* resulting p2 repository is added to the eclipse target
+						
+						* reload the eclipse target
+				</section>
+				<section id="challenges_3" data-markdown>
+					### project interdependencies: BND -&gt; PDE
+
+					* Again build path project dependency is **NO** option
+					
+					* BND project depending on PDE bundle
+					
+						* requires a PDE feature export/build to create p2 repo
+
+						* index p2 repository with BINDEX as obr repo
+
+						* reference obr repo inside cnf project
+						
+					**We decided to have only PDE depending on BND projects**
+				</section>
+				<section id="challenges_3">
+					<h3>synchronize compile settings</h3>
+					<h4>JDT/PDE compilation on eclipse workspace target based on directories, installations, features or software sites</h4>
+					<pre><code style="font-size: 18px; margin-top: 20px;">&lt;target_prj&gt;/workpsace.target
+
+&lt;pde_prj&gt;/.classpath
+&lt;pde_prj&gt;/.settings/org.eclipse.jdt.core.prefs
+&lt;pde_prj&gt;/META-INF/MANIFEST.MF -&gt; Bundle-RequiredExecutionEnvironment
+&lt;pde_prj&gt;/build.properties -&gt; jre.compilation.profile
+					</code></pre>
+					<h4>bndtools project specify target based on configured OBR repos</h4>
+					<pre><code data-trim style="font-size: 18px; margin-top: 20px;">&lt;cnf_prj&gt;/ext/repositories.bnd
+
+&lt;bnd_prj&gt;/.classpath
+&lt;bnd_prj&gt;/.settings/org.eclipse.jdt.core.prefs
+&lt;bnd_prj&gt;/bnd.bnd
+					</code></pre>
+					<p><b>Synchronize between Eclipse and bndtools compilation via import of the JDT settings</b></p>
+				</section>
+			</section>
+			
+			<section id="devenv_setup">
+				<section _1" data-markdown>
+					### Initial development environment setup
+					#### GOAL: getting java and bootstrap eclipse ready
+					
+					* install [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (&(osgi.ee=JavaSE)(version>=1.7))[*](#/standards)
+
+					* download [eclipse platform](http://download.eclipse.org/eclipse/downloads/)
+
+					* unzip and launch bootstrap eclipse
+					
+					**ready for environment setup**
+				</section>
+				<section id="devenv_setup_2" data-markdown>
+					### prepare tooling and update setup
+					* [create local mirror of required tools p2 repositories](http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/guide/p2_mirror.html?resultof=%22%70%32%2e%6d%69%72%72%6f%72%22%20)
+
+					* [install with p2 director Eclipse IDE including bndtools](http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/p2_director.html)
+
+					* launch IDE and create a bndEvaluation workspace
+
+					* launch IDE and create the product workspace
+					
+					* compare and configure the bnd configuration project cnf inside product workspace
+				</section>
+				<section id="devenv_setup_3" data-markdown>
+					### Update development environment setup with new bndtools
+
+					* install with p2 director Eclipse IDE including bndtools, ... into new location
+
+					* create evaluation workspace with default bnd configuration project
+
+					* compare/update bnd configuration project from eval to productive workspace
+				</section>
+				<section id="devenv_setup_4" data-markdown>
+					### Alternatively have a look at
+
+					[Eclipse Project Oomph](https://projects.eclipse.org/projects/tools.oomph)
+				</section>
+			</section>
+			<section>
+				<section id="development" data-markdown>
+					### Development in "mixed-mode"
+
+					* After modifications on bnd bundles 
+					
+						1. bnd2pde build
+
+						2. target reload required
+						
+						3. validation via view "TargetPlatform State"
+					
+					* Debugging source code editor is showing read-only bnd target bundles
+
+						* editing impossible (uncommon behaviour)
+
+						* open the appropriate source type with  
+							Ctrl+Shift+T and CamelCase notation
+				</section>
+			</section>
+			<section>
+				<section id="build_and_assembly" data-markdown>
+					### automated build and assembly
+					bnd projects can be build with ant
+					jars can be published as p2 repository
+					pde-build is consuming this p2 repository
+				</section>
+			</section>
+			<section>
+				<section id="conclusion_1" data-markdown>
+					### Scripts/Tools created for suppporting the "mixed-mode" development
+					
+					* p2 repository mirroring with OBR indexing
+
+					* IDE bootstrap scripts mirror, install, launch templates
+
+					* build.BND2PDE -> builds PDE target including BND bundles
+
+					* PDE TargetReloader Plug-in
+				</section>
+				<section id="conclusion_2" data-markdown>
+					### Conclusion
+					
+					* "mixed-mode" development is hard -&gt; try to migrate fast
+
+					* bndtools defaults are not ideal for enterprise environments
+					
+					* bndtools needs some windows committers (cause windows is different :(
+
+					* bndtools development is more comprehensible than PDE
+					
+					* development benefits for us exceeded the tooling problems compared to PDE
+					
+					** Migration is feasible, but is not for free!**
+				</section>
+			</section>
+
+			<section id="questions" data-markdown>
+				# Questions? 
+				
+				* example source code is available here 
+			</section>
+
+			<section id="credits">
+				<section id="credits" data-markdown>
+					### Credits
+					
+					For sharing their great work I like to thank ...
+					
+					* Peter Kriens, Neil Bartlett, BJ Hargrave and all other bnd/bndtools/bindex commiter and contributors
+					
+					* [REVEAL.JS](http://lab.hakim.se/reveal-js/) - HTML presentations by Hakim El Hattab
+				</section>
+				<section id="video_epic_split">
+					<h3>Volvo Trucks - Making of ...</h3>
+					<p>
+						<iframe width="640" height="390" src="https://www.youtube.com/embed/T0P_Ded5cbs" frameborder="0" allowfullscreen></iframe>
+					</p>
+					<p>
+						<small><a href="https://www.youtube.com/watch?v=M7FIvfx5J10" target="_blank">short version (1:16mn) - commercial spot only</a></small>
+					</p>
+				</section>
+				<section id="standards" data-markdown>
+					### standard references
+					
+					* [OSGi specifications](http://www.osgi.org/Specifications/HomePage)
+
+					* [LDAP search filter syntax](http://tools.ietf.org/search/rfc4515)
+
+					* [Semantic Versioning 2.0.0](http://semver.org/)
+
+					### Tools
+					
+					* BND / bndtools
+						* [BND](http://www.aqute.biz/Bnd/Bnd) 
+						* [Usergroup](https://groups.google.com/forum/#!forum/bndtools-users)
+						* [Source on Github](https://github.com/bndtools/bnd) 
+						* [Continuous Builds from Cloudbees](https://bndtools.ci.cloudbees.com/)
+				</section>
+				<section id="links_bndtools" data-markdown>
+					### BND and bndtools resources
+					
+					* [website](http://bndtools.org/)
+					
+					* [bug reports/source code on GitHub](https://github.com/bndtools)
+
+					* [continuous build on cloudbees](https://bndtools.ci.cloudbees.com/job/bndtools.master/)
+
+					* [usergroup in GoogleGroups](https://groups.google.com/forum/#!forum/bndtools-users)
+				</section>
+
+			</section>
+
+			<section id="BACKUP">
+				<section>
+					<h1>BACKUP</h1>
+				</section>
+				<section data-markdown id="principles" data-notes="^Note:" >
+					### Development Principles
+					* everything must be
+						* locally - network is optional
+						* portable (copy and paste)
+							* java, eclipse, other tools
+							* settings (~/.xyz, %USERPROFILE%)
+							* eclipse (configuration, data, keyring, p2 data)
+							* target products
+					* be explicit and precise with versions for everything
+
+					Note:
+					Yes, I do know Internet ;-) BUT it is slow or not available!
+				</section>
+				<section data-markdown>
+					### Inspirations
+					
+					* [Peter Kriens](http://www.aqute.biz/Main/HomePage) - [osgi.enroute|principles](https://github.com/osgi/osgi.enroute/blob/master/osgi.enroute.doc/doc/en/1200-Principles.md)
+					* [Neil Bartlett](http://njbartlett.name/)
+						* [book: OSGi in practice](http://njbartlett.name/files/osgibook_preview_20091217.pdf)
+					* [Resource-oriented Client Architecture](http://roca-style.org/)
+				</section>
+				<section id="pitfalls" data-markdown>
+					### common pitfalls
+
+					* mirroring a p2 repository results in .blobstore folder
+					
+						-&gt; [solution](https://wiki.eclipse.org/Equinox/p2/p2.mirrorsURL#How_to_avoid_.blobstore_for_.2A.jar.pack.gz_files)
+					
+					* problem: mirrored p2 repositories might contain inside references to other p2
+					repositories
+					
+						-&gt; solution: download references p2 repos and make repository reference relative
+				</section>
+			</section>
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.min.js"></script>
+
+	<script>
+
+		// Full list of configuration options available here:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
+			o: true,
+			slideNumber: true,
+			
+			theme: Reveal.getQueryHash().theme || 'solarized_pk', // beige,blood,default,moon,night,serif,simple,sky,solarized
+			transition: Reveal.getQueryHash().transition || 'cube', // default/cube/page/concave/zoom/linear/fade/none
+
+			// Parallax scrolling
+			// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+			// parallaxBackgroundSize: '2100px 900px',
+
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+				{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
+		});
+
+	</script>
+
+</body>
+</html>
