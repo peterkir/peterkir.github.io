@@ -60,14 +60,14 @@
 
 			<section id="aboutme" data-markdown>
 				### About me
-
+			
 				![](images/PeterKirschner.jpg "Peter Kirschner")
 
 				* name: Peter Kirschner
 				* profession: IT software engineer
 				* email: &#112;e&#116;e&#114;&#064;&#107;&#105;&#114;&#115;&#099;&#104;&#110;e&#114;&#115;&#046;&#100;&#101;
 				* twitter: [@peterkir](http://twitter.com/peterkir)
-				* github: https://peterkir.github.io/
+				* github: https://github.com/peterkir/ece2014			
 			</section>
 
 			<section id="toc">
@@ -82,8 +82,32 @@
 			</section>
 
 			<section id="motivation">
-				<section id="motivation_1">
-					<h3>Why we want to use bndtools</h3>
+				<section id="motivation_0" data-markdown>
+					### Motivation
+
+					* PDE pain points
+					
+					* Why bnd/bndtools					
+				</section>
+				<section id="motivation_1" data-markdown>
+					### PDE pain points
+					
+					* [dependency management on package is level difficult](https://bugs.eclipse.org/bugs/show_bug.cgi?id=73957)
+
+					* target horror
+					
+						* workspace and target setup complex (e.g. duplicates)
+						
+						* target reloading is not fail safe
+						
+					* launch configurations plugin or feature based
+					
+						* difficult to have precise launch configs(feature is near)
+					
+						* launch is adding fragments from workspace to the runtime
+				</section>
+				<section id="motivation_2">
+					<h3>Why bndtools</h3>
 					<div style="position: relative;">
 <!--
 					<img src="images/text_really.png" style="position: absolute; top: 30px; left: 460px; border-style=solid; border:0px; background-color:#e4decd;"/>
@@ -108,69 +132,27 @@
 					</table>
 					</div>
 				</section>
-				<section id="motivation_2" data-markdown>
-					### PDE issues and drawbacks
-					
-					* issues with "automated" import package in Plugin Editor
-					
-						* [73957 Correct plug-in dependencies result in invalid compile errors (was incomplete type hierarchy)](https://bugs.eclipse.org/bugs/show_bug.cgi?id=73957)
-
-					* workspace and target setup complex
-
-					* target reloading was error prone (since 4.3 much better)
-						
-					* launch configuration from PDE is adding fragments from workspace to the runtime
-				</section>
 			</section>
 
 			<section id="comparison">
 				<section id="comparison_0" data-markdown>
 					### Comparison of PDE and bndtools
 					
-					* Major differences
-
 					* Project Layouts
 
 					* IDE bundle handling
 				</section>
+
 				<section id="comparison_1">
-					<h3>Major differences</h3>
-					<table>
-						<tr>
-							<th>Topic</th>
-							<th>PDE</th>
-							<th>bndtools</th>
-						</tr>
-						<tr>
-							<td>project layout</td>
-							<td>single bundle from one eclipse project</td>
-							<td>single or multiple bundles from one project</td>
-						</tr>
-						<tr>
-							<td>target scope</td>
-							<td>complete workspace<br><code>*.target</code></td>
-							<td>per eclipse project<br><code>bnd.bnd</code></td>
-						</tr>
-						<tr>
-							<td>MANIFEST handling</td>
-							<td>manual attribute editor</td>
-							<td>many attributes automatically derived</td>
-						</tr>
-						<tr>
-							<td>project files</td>
-							<td><code>.project</code><br>
-							<code>.classpath</code><br>
-							</td>
-							<td>.</td>
-						</tr>
-					</table>
-				</section>
-				<section id="comparison_2" >
 					<h3>Project Layouts</h3>
-						<a href="#/video_epic_split" alt="Volvo Trucks with Jean-Claude Van Damme">
-							<img src="images/PackageExplorer_described.png"  width="32%" alt="Eclipse PackageExplorer View" /> 
-						</a>
+						<img align="left" src="images/PackageExplorer_described.png"  width=32%" alt="Eclipse PackageExplorer View" />
+						</br>
+						bnd allows single or multiple bundles from one project</br>
+						</br>
+						build path can be configured on eclipse project level
+						
 				</section>
+
 				<section id="comparison_3" data-markdown>
 					### IDE bundle handling
 					
@@ -192,56 +174,54 @@
 				<section id="challenges_0" data-markdown>
 					### Conflicting/overlapping areas 
 					
-					* project build path  
+					* Project Build Path  
 
-					* project interdependencies  
+					* Project Interdependencies  
 						
 						* PDE depends on BND  
 						* BND depends on PDE  
 
-					* compiler settings synchronization  
+					* Compiler Settings Synchronization  
 
 					</section>
 				<section id="challenges_1" data-markdown>
 					### Project Build Path
 					
-					* PDE uses default runtime target or file-based target for complete workspace
+					* PDE build path based on complete workspace target
 
 						* all workspace projects share a common target
 						
-						* higher complexity for import-packages
+						* high complexity on selecting correct import-packages
 						
 					* bndtools use project based build path from OBR repos
 						
-						* build path can be more specific for each project 
+						* build path can be precise for each project 
 
-						* reduced package import scope on project level
+						* reduces number of import-package
 						
-					* **Precise build path config feasible for bnd projects**
+					* **bnd projects have a precise import-package scope**
 				</section>
 				<section id="challenges_2" data-markdown>
-					### Project interdependencies: PDE -&gt;BND
+					### PDE depends on BND
 
 					* Easy option: JDT build path dependency via project
-
+					
 						* Is only working in IDE but lacks package visibility view
 						
-					* **Eclipse Project dependencies are NO option for OSGi**
+						* JDT project dependencies are **NO option** for OSGi  					
 
-					* **Real OSGi development can be achieved via JDT target**
+					* **OSGi development is achieved via target**
 							
 						* BND project compiled to generated/bundle.jar
 						
 						* p2 publisher generates p2 repo from generated/bundle.jar files 
 						
-						* resulting p2 repository is added to the eclipse target
-						
-						* reload the eclipse target
+						* eclipse target with this p2 repo is reloaded
 				</section>
 				<section id="challenges_3" data-markdown>
-					### project interdependencies: BND -&gt; PDE
+					### BND depends on PDE
 
-					* Again build path project dependency is **NO** option
+					* JDT project dependency are again **NO** option (see above)
 					
 					* BND project depending on PDE bundle
 					
@@ -249,71 +229,86 @@
 
 						* index p2 repository with BINDEX as obr repo
 
-						* reference obr repo inside cnf project
+						* reference and refresh obr repo inside cnf project
 						
-					**We decided to have only PDE depending on BND projects**
+					* **Luckily we don't required this**
 				</section>
-				<section id="challenges_3">
+				<section id="challenges_4">
 					<h3>synchronize compile settings</h3>
-					<h4>JDT/PDE compilation on eclipse workspace target based on directories, installations, features or software sites</h4>
-					<pre><code style="font-size: 18px; margin-top: 20px;">&lt;target_prj&gt;/workpsace.target
-
+					<h4>JDT/PDE compilation on target</h4>
+					<pre><code style="font-size: 18px; margin-top: 20px;">&lt;target_prj&gt;/workspace.target
 &lt;pde_prj&gt;/.classpath
 &lt;pde_prj&gt;/.settings/org.eclipse.jdt.core.prefs
 &lt;pde_prj&gt;/META-INF/MANIFEST.MF -&gt; Bundle-RequiredExecutionEnvironment
 &lt;pde_prj&gt;/build.properties -&gt; jre.compilation.profile
 					</code></pre>
-					<h4>bndtools project specify target based on configured OBR repos</h4>
+					<h4>bndtools</h4>
 					<pre><code data-trim style="font-size: 18px; margin-top: 20px;">&lt;cnf_prj&gt;/ext/repositories.bnd
-
 &lt;bnd_prj&gt;/.classpath
 &lt;bnd_prj&gt;/.settings/org.eclipse.jdt.core.prefs
 &lt;bnd_prj&gt;/bnd.bnd
 					</code></pre>
-					<p><b>Synchronize between Eclipse and bndtools compilation via import of the JDT settings</b></p>
+					<h4>Synchronize between JDT/PDE and bndtools compilation via import of the JDT settings</h4>
 				</section>
 			</section>
 			
 			<section id="devenv_setup">
-				<section _1" data-markdown>
-					### Initial development environment setup
-					#### GOAL: getting java and bootstrap eclipse ready
+				<section id="devenv_setup_0" data-markdown>
+					### Development setup
 					
-					* install [Java SDK](http://www.oracle.com/technetwork/java/javase/downloads/index.html) (&(osgi.ee=JavaSE)(version>=1.7))[*](#/standards)
-
-					* download [eclipse platform](http://download.eclipse.org/eclipse/downloads/)
-
-					* unzip and launch bootstrap eclipse
+					* initial setup
 					
-					**ready for environment setup**
+					* updating setup or target
+				</section>
+				<section id="devenv_setup_1" data-markdown>
+					### Initial Dev Setup
+
+					* Eclipse SDK to create/updating **bootstrap IDE**
+					
+						* install **IDEfix** (eclipse + bndtools + ...)
+						
+						* mirror required repos locally
+					
+					* **IDEfix** with eval workspace
+						
+						* investigating bndtools cnf 
+
+					* **IDEfix** development workspace for the product
+					
+						* development of 
 				</section>
 				<section id="devenv_setup_2" data-markdown>
-					### prepare tooling and update setup
-					* [create local mirror of required tools p2 repositories](http://help.eclipse.org/luna/topic/org.eclipse.platform.doc.isv/guide/p2_mirror.html?resultof=%22%70%32%2e%6d%69%72%72%6f%72%22%20)
+					### Update Dev Setup
 
-					* [install with p2 director Eclipse IDE including bndtools](http://help.eclipse.org/indigo/index.jsp?topic=/org.eclipse.platform.doc.isv/guide/p2_director.html)
-
-					* launch IDE and create a bndEvaluation workspace
-
-					* launch IDE and create the product workspace
+					* **bootstrap IDE**
 					
-					* compare and configure the bnd configuration project cnf inside product workspace
+						* mirror new bndversion and install new IDEfix
+						
+						* mirror and index new target repositories
+
+					* launch **IDEfix** with an new eval workspace
+						
+						* eval bnd updates on cnf 
+					
+					* launch **IDEfix** with new product workspace
+						
+						* compare and configure cnf
+						
+						* import your projects
 				</section>
 				<section id="devenv_setup_3" data-markdown>
-					### Update development environment setup with new bndtools
+					### Scripts/Tools created for suppporting the "mixed-mode" development
+					
+					* p2 repository mirroring with OBR indexing
 
-					* install with p2 director Eclipse IDE including bndtools, ... into new location
+					* IDE bootstrap scripts mirror, install, launch templates
 
-					* create evaluation workspace with default bnd configuration project
+					* bnd2pde -> p2 publishing and PDE target creation
 
-					* compare/update bnd configuration project from eval to productive workspace
-				</section>
-				<section id="devenv_setup_4" data-markdown>
-					### Alternatively have a look at
-
-					[Eclipse Project Oomph](https://projects.eclipse.org/projects/tools.oomph)
+					* [PDE TargetReloader Plug-in](https://github.com/MKeck/pde.targetreloader)
 				</section>
 			</section>
+
 			<section>
 				<section id="development_1" data-markdown>
 					### Development in "mixed-mode"
@@ -334,39 +329,53 @@
 							Ctrl+Shift+T and CamelCase notation
 				</section>
 				<section id="development_2" data-markdown>
-					### Scripts/Tools created for suppporting the "mixed-mode" development
+					### Development in bndtools
 					
-					* p2 repository mirroring with OBR indexing
-
-					* IDE bootstrap scripts mirror, install, launch templates
-
-					* bnd2pde -> p2 publishing and PDE target creation
-
-					* [PDE TargetReloader Plug-in](https://github.com/MKeck/pde.targetreloader)
+					# FUN
+					
+					## enjoy OSGi services and components!
 				</section>
 			</section>
+
 			<section>
-				<section id="conclusion" data-markdown>
+				<section id="conclusion_0" data-markdown>
 					### Conclusion
+					
+					* Our Migration Progress
+					
+					* Summary of migration to bndtools
+				</section>
+
+				<section id="conclusion_1" >
+					<h3>Our Migration Progress</h3>
+					<img src="images/20141028111901.jpg"  width="70%" alt="number of pde and bnd bundles" />
+				</section>
+			
+				<section id="conclusion_2" data-markdown>
+					### Summary of migration to bndtools
 					
 					* "mixed-mode" development is hard -&gt; try to migrate fast
 
-					* bndtools defaults are not ideal for enterprise environments
+					* defaults are not ideal for enterprise environments
 					
-					* bndtools needs some windows committers (cause windows is different :(
+					* some windows committers required(cause windows is different :(
 
-					* bndtools development is more comprehensible than PDE
+					* development is more comprehensible than PDE
 					
 					* development benefits for us exceeded the tooling problems compared to PDE
 					
 					** Migration is feasible, but is not for free!**
 				</section>
 			</section>
-
+			
 			<section id="questions" data-markdown>
 				# Questions? 
 				
-				* example source code is available here 
+				* contact [me](#/aboutme) for more information
+				
+				* example source on [github](https://github.com/peterkir/ece2014)
+				
+				* example project is updated continuously
 			</section>
 
 			<section id="credits">
@@ -388,6 +397,19 @@
 						<small><a href="https://www.youtube.com/watch?v=M7FIvfx5J10" target="_blank">short version (1:16mn) - commercial spot only</a></small>
 					</p>
 				</section>
+				<section id="links_bndtools" data-markdown>
+					### BND and bndtools resources
+					
+					* [BND](http://www.aqute.biz/Bnd/Bnd) 
+					* [Usergroup](https://groups.google.com/forum/#!forum/bndtools-users)
+					* [Source on Github](https://github.com/bndtools/bnd) 
+					* [Continuous Builds from Cloudbees](https://bndtools.ci.cloudbees.com/)
+					* [website](http://bndtools.org/)
+					* [bug reports/source code on GitHub](https://github.com/bndtools)
+					* [continuous build on cloudbees](https://bndtools.ci.cloudbees.com/job/bndtools.master/)
+					* [usergroup in GoogleGroups](https://groups.google.com/forum/#!forum/bndtools-users)
+				</section>
+
 				<section id="standards" data-markdown>
 					### standard references
 					
@@ -396,29 +418,10 @@
 					* [LDAP search filter syntax](http://tools.ietf.org/search/rfc4515)
 
 					* [Semantic Versioning 2.0.0](http://semver.org/)
-
-					### Tools
-					
-					* BND / bndtools
-						* [BND](http://www.aqute.biz/Bnd/Bnd) 
-						* [Usergroup](https://groups.google.com/forum/#!forum/bndtools-users)
-						* [Source on Github](https://github.com/bndtools/bnd) 
-						* [Continuous Builds from Cloudbees](https://bndtools.ci.cloudbees.com/)
 				</section>
-				<section id="links_bndtools" data-markdown>
-					### BND and bndtools resources
-					
-					* [website](http://bndtools.org/)
-					
-					* [bug reports/source code on GitHub](https://github.com/bndtools)
-
-					* [continuous build on cloudbees](https://bndtools.ci.cloudbees.com/job/bndtools.master/)
-
-					* [usergroup in GoogleGroups](https://groups.google.com/forum/#!forum/bndtools-users)
-				</section>
-
 			</section>
 
+<!--
 			<section id="BACKUP">
 				<section>
 					<h1>BACKUP</h1>
@@ -466,6 +469,7 @@
 						-&gt; solution: download references p2 repos and make repository reference relative
 				</section>
 			</section>
+-->
 		</div>
 	</div>
 
