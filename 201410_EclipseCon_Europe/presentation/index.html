@@ -4,9 +4,9 @@
 <head>
     <meta charset="utf-8">
 
-    <title>An epic split between OSGi tooling Eclipse PDE and bndtools - EclipseCon Europe 2014</title>
+    <title>An epic split between OSGi tooling Eclipse PDE and Bndtools - EclipseCon Europe 2014</title>
 
-    <meta name="description" content="An epic split between OSGi tooling Eclipse PDE and bndtools - EclipseCon Europe 2014 - presentation slides - explaining usage of Eclipse PDE and OSGi bnd bndtools usage">
+    <meta name="description" content="An epic split between OSGi tooling Eclipse PDE and Bndtools - EclipseCon Europe 2014 - presentation slides - explaining usage of Eclipse PDE and OSGi bnd Bndtools usage">
     <meta name="author" content="Peter Kirschner">
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -43,7 +43,7 @@
         <div class="slides">
             <section id="title">
                 <h6>An Epic Split between OSGi Tooling</h6>
-                <h3>Eclipse PDE and bndtools</h3>
+                <h3>Eclipse PDE and Bndtools</h3>
                 <a href="#/video_epic_split" alt="Volvo Trucks with Jean-Claude Van Damme">
                     <img src="images/Volvo-Trucks-The-Epic-Split6.jpg"  width="70%" alt="Volvo Trucks - Epic Split" /> 
                 </a>
@@ -73,7 +73,7 @@
                 <h3>Table of contents</h3>
                 <ul>
                     <li>Motivation</li>
-                    <li>Comparison PDE to bndtools</li>
+                    <li>Comparison PDE to Bndtools</li>
                     <li>Development Setup & Update</li>
                     <li>Programming</li>
                     <li>Conclusion</li>
@@ -86,7 +86,7 @@
 
                     * PDE pain points
                     
-                    * Why bnd/bndtools                  
+                    * Why bnd/Bndtools                  
                 </section>
                 <section id="motivation_1" data-markdown>
                     ### PDE pain points
@@ -101,12 +101,12 @@
                         
                     * launch configurations
                     
-                        * what the hell hase pde loadet in the runtime
+                        * what the hell has PDE loaded in the runtime
                     
                         * where do these runtime settings come from
                 </section>
                 <section id="motivation_2">
-                    <h3>Why bndtools</h3>
+                    <h3>Why Bndtools</h3>
                     <div style="position: relative;">
 <!--
                     <img src="images/text_really.png" style="position: absolute; top: 30px; left: 460px; border-style=solid; border:0px; background-color:#e4decd;"/>
@@ -135,7 +135,7 @@
 
             <section id="comparison">
                 <section id="comparison_0" data-markdown>
-                    ### Comparison of PDE and bndtools
+                    ### Comparison of PDE and Bndtools
                     
                     * Project Layouts
 
@@ -161,7 +161,7 @@
 
                         * PDE build/export required to create concrete jar files
 
-                    *  bndtools  
+                    *  Bndtools  
 
                         * creates physical jar file inside generated folder
                         
@@ -171,11 +171,11 @@
 
             <section id="challenges">
                 <section id="challenges_0" data-markdown>
-                    ### Concurrent areas 
+                    ### Concurrent areas - Mixed-Mode
                     
                     * Project Build Path  
 
-                    * Project Interdependencies  
+                    * Project Interdependencies
                         
                         * PDE depends on BND  
                         * BND depends on PDE  
@@ -186,13 +186,13 @@
                 <section id="challenges_1" data-markdown>
                     ### Project Build Path
                      
-                    * JDT/PDE
+                    * PDE
 
                         * projects share a common target
                         
                         * high complexity selecting import-packages
                         
-                    * bndtools 
+                    * Bndtools 
                         
                         * configured for each project 
 
@@ -203,12 +203,6 @@
                 <section id="challenges_2" data-markdown>
                     ### PDE depends on BND
 
-                    * JDT project dependency
-                    
-                        * IDE only and NO real package visibility
-                        
-                        * **NO option**
-                        
                     * OSGi dev with PDE target
                             
                         * BND creates generated/bundle.jar
@@ -220,12 +214,6 @@
                 <section id="challenges_3" data-markdown>
                     ### BND depends on PDE
 
-                    * JDT project dependency
-                    
-                        * IDE only and NO real package visibility
-                        
-                        * **NO option**
-                    
                     * BND project depending on PDE bundle
                     
                         * PDE feature export/build creating p2 repo
@@ -238,21 +226,21 @@
                 </section>
                 <section id="challenges_4">
                     <h3>Synchronize Compile Settings</h3>
-                    <h4>JDT/PDE compilation on target</h4>
+                    <h4>PDE compilation on target</h4>
                     <pre><code style="font-size: 18px; margin-top: 20px;">&lt;target_prj&gt;/workspace.target
 &lt;pde_prj&gt;/.classpath
 &lt;pde_prj&gt;/.settings/org.eclipse.jdt.core.prefs
 &lt;pde_prj&gt;/META-INF/MANIFEST.MF -&gt; Bundle-RequiredExecutionEnvironment
 &lt;pde_prj&gt;/build.properties -&gt; jre.compilation.profile
                     </code></pre>
-                    <h4>bndtools</h4>
+                    <h4>Bndtools</h4>
                     <pre><code data-trim style="font-size: 18px; margin-top: 20px;">&lt;cnf_prj&gt;/ext/repositories.bnd
 &lt;bnd_prj&gt;/.classpath
 &lt;bnd_prj&gt;/.settings/org.eclipse.jdt.core.prefs
 &lt;bnd_prj&gt;/bnd.bnd
                     </code></pre>
                     </br>
-                    <h4>Synchronize JDT and bnd compilation via import of JDT settings</h4>
+                    <h4>Synchronize PDE and bnd compilation via import of JDT settings</h4>
                 </section>
             </section>
             
@@ -271,13 +259,13 @@
 
                     * Eclipse SDK to create/update -> **bootstrap IDE**
                     
-                        * install **IDEfix** (eclipse + bndtools + ...)
+                        * install **IDEfix** (eclipse + Bndtools + ...)
                         
                         * mirror required repos locally
                     
                     * **IDEfix** with eval workspace
                         
-                        * adapt bndtools cnf
+                        * adapt Bndtools cnf
 
                     * **IDEfix** product workspace
                     
@@ -344,7 +332,7 @@
                 <section id="development_2">
                     <h3>Coding</h3>
 					
-                    <h2>with bndtools can leverage</h1>
+                    <h2>with Bndtools can leverage</h1>
                     <h1>the Joy of OSGi</h1>
                 </section>
             </section>
@@ -370,7 +358,7 @@
 
                     * Defaults are not ideal for Enterprise Environments
                     
-                    * Windows Committers wanted - Windows is special
+                    * Bndtools Windows Committers wanted - Windows is special
 
                     * Work is more comprehensible
                     
@@ -403,7 +391,7 @@
 
 				* Peter Kriens, Neil Bartlett, BJ Hargrave 
 
-				* and all other bnd/bndtools/bindex commiter and contributors
+				* and all other bnd/Bndtools/bindex commiter and contributors
 				
 				* [REVEAL.JS](http://lab.hakim.se/reveal-js/) - HTML presentations by Hakim El Hattab
 				</section>
@@ -417,17 +405,17 @@
                         <small><a href="https://www.youtube.com/watch?v=M7FIvfx5J10" target="_blank">short version (1:16mn) - commercial spot only</a></small>
                     </p>
                 </section>
-                <section id="links_bndtools" data-markdown>
-                    ### BND and bndtools resources
+                <section id="links_Bndtools" data-markdown>
+                    ### BND and Bndtools resources
                     
                     * [BND](http://www.aqute.biz/Bnd/Bnd) 
-                    * [Usergroup](https://groups.google.com/forum/#!forum/bndtools-users)
-                    * [Source on Github](https://github.com/bndtools/bnd) 
-                    * [Continuous Builds from Cloudbees](https://bndtools.ci.cloudbees.com/)
-                    * [website](http://bndtools.org/)
-                    * [bug reports/source code on GitHub](https://github.com/bndtools)
-                    * [continuous build on cloudbees](https://bndtools.ci.cloudbees.com/job/bndtools.master/)
-                    * [usergroup in GoogleGroups](https://groups.google.com/forum/#!forum/bndtools-users)
+                    * [Usergroup](https://groups.google.com/forum/#!forum/Bndtools-users)
+                    * [Source on Github](https://github.com/Bndtools/bnd) 
+                    * [Continuous Builds from Cloudbees](https://Bndtools.ci.cloudbees.com/)
+                    * [website](http://Bndtools.org/)
+                    * [bug reports/source code on GitHub](https://github.com/Bndtools)
+                    * [continuous build on cloudbees](https://Bndtools.ci.cloudbees.com/job/Bndtools.master/)
+                    * [usergroup in GoogleGroups](https://groups.google.com/forum/#!forum/Bndtools-users)
                 </section>
 
                 <section id="standards" data-markdown>
