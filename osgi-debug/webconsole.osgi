@@ -1,21 +1,21 @@
 echo \# INSTALLATION
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/javax.servlet-api-3.1.0.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.http.api-2.3.2.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.http.jetty-2.3.2.jar
+install http://peterkir.github.io/osgi-debug/repo/javax.servlet-api-3.1.0.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.http.api-2.3.2.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.http.jetty-2.3.2.jar
 ### contains the webconsole and the dependent libraries
 # org.apache.commons.io
 # org.apache.commons.fileupload
 # org.json
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole-4.2.2-all.jar
-# install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole-4.2.2.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.ds-1.0.0.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.event-1.1.0.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.memoryusage-1.0.4.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.obr-1.0.2.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.packageadmin-1.0.0.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.scriptconsole-1.0.0.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.upnp-1.0.2.jar
-install http://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/aQute.xray.plugin-1.7.0.201403241317.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole-4.2.2-all.jar
+#install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole-4.2.2.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.ds-1.0.0.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.event-1.1.0.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.memoryusage-1.0.4.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.obr-1.0.2.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.packageadmin-1.0.0.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.scriptconsole-1.0.0.jar
+install http://peterkir.github.io/osgi-debug/repo/org.apache.felix.webconsole.plugins.upnp-1.0.2.jar
+install http://peterkir.github.io/osgi-debug/repo/aQute.xray.plugin-1.7.0.201403241317.jar
 echo \# STARTING BUNDLES
 start org.apache.felix.http.jetty
 start org.apache.felix.webconsole
