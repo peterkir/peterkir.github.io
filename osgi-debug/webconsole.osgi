@@ -1,0 +1,34 @@
+echo installing required bundles
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.http.jetty-2.3.2.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.servicediagnostics.plugin-0.1.3.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole-4.2.2-all.jar
+# install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole-4.2.2.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.ds-1.0.0.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.event-1.1.0.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.memoryusage-1.0.4.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.obr-1.0.2.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.packageadmin-1.0.0.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.scriptconsole-1.0.0.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/org.apache.felix.webconsole.plugins.upnp-1.0.2.jar
+install https://github.com/peterkir/peterkir.github.io/blob/master/osgi-debug/repo/aQute.xray.plugin-1.7.0.201403241317.jar
+
+echo starting bundles
+
+# install http://jazz01.rd.corpintra.net/web/release/debug/webconsole/org.apache.felix.metatype-1.0.4.jar
+
+start org.apache.felix.http.jetty
+start org.apache.felix.servicediagnostics.plugin
+start org.apache.felix.webconsole
+start org.apache.felix.webconsole.plugins.ds
+start org.apache.felix.webconsole.plugins.event
+start org.apache.felix.webconsole.plugins.memoryusage
+start org.apache.felix.webconsole.plugins.obr
+start org.apache.felix.webconsole.plugins.packageadmin
+start org.apache.felix.webconsole.plugins.scriptconsole
+start org.apache.felix.webconsole.plugins.upnp
+
+echo all of the following bundles should be active now
+ss org.apache.felix
+
+echo show bundles in installed state
+ss -s installed
