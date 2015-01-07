@@ -23,7 +23,7 @@ put the following section inside your bnd configuration (e.g. ext/repositories.b
             cache=${workspace}/cnf/cache/R-4.4-201406061215
 
 
-## how this have been created
+## how where these repositories created
 
 - p2 repositories have been mirrored locally
 - executed bindex command with the following call
