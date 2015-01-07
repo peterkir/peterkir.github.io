@@ -9,11 +9,13 @@ copy the link locations below and reference them like [here](#usage)
 - [Eclipse Simultaneous Release Juno 3.8.2/4.2 ](eclipse_3.8.2_Juno_201303010900.xml)
 
 - [Eclipse Platform Release 4.4](eclipse_4.4.0_Platform_R-4.4-201406061215.xml)
+- [Eclipse Simultaneous Release 4.4 Luna ](eclipse_4.4.0_Luna_201406250900.xml)
 
 - [Eclipse Platform Release 4.4.1](eclipse_4.4.1_Platform_R-4.4.1-201409250400.xml)
+- [Eclipse Simultaneous Release 4.4.1 Luna ](eclipse_4.4.1_Luna_201409261001.xml)
 
 
-## <a name="usage"></a>usage sample of an include section for the usage inside bnd/bndtools
+## <a name="usage">usage</a> sample of an include section for the usage inside bnd/bndtools
 
 put the following section inside your bnd configuration (e.g. ext/repositories.bnd)
 
