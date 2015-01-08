@@ -5,12 +5,12 @@
 
 copy the link locations below and reference them like [here](#usage) 
 
-- Eclipse Platform Release 3.8.2/4.2 [xml](eclipse_3.8.2_Platform_R-3.8.2-201301310800.xml)
-- Eclipse Simultaneous Release Juno 3.8.2/4.2 [xml](eclipse_3.8.2_Juno_201303010900.xml)
-- Eclipse Platform Release 4.4 [xml](eclipse_4.4.0_Platform_R-4.4-201406061215.xml)
-- Eclipse Simultaneous Release 4.4 Luna [xml](eclipse_4.4.0_Luna_201406250900.xml)
-- Eclipse Platform Release 4.4.1 [xml](eclipse_4.4.1_Platform_R-4.4.1-201409250400.xml)
-- Eclipse Simultaneous Release 4.4.1 Luna [xml](eclipse_4.4.1_Luna_201409261001.xml) [gzip](eclipse_4.4.1_Luna_201409261001.xml.gz) 
+- Eclipse Platform Release 3.8.2/4.2          [xml](eclipse_3.8.2_platform.xml) [gzip](eclipse_3.8.2_platform.xml.gz)
+- Eclipse Simultaneous Release Juno 3.8.2/4.2 [xml](eclipse_3.8.2_Juno.xml)     [gzip](eclipse_3.8.2_Juno.xml)
+- Eclipse Platform Release 4.4.0              [xml](eclipse_4.4.0_Platform.xml) [gzip](eclipse_4.4.0_Platform.xml.gz)
+- Eclipse Simultaneous Release 4.4.0 Luna     [xml](eclipse_4.4.0_Luna.xml)     [gzip](eclipse_4.4.0_Luna.xml.gz)
+- Eclipse Platform Release 4.4.1 			  [xml](eclipse_4.4.1_Platform.xml) [gzip](eclipse_4.4.1_Platform.xml.gz)
+- Eclipse Simultaneous Release 4.4.1 Luna 	  [xml](eclipse_4.4.1_Luna.xml)     [gzip](eclipse_4.4.1_Luna.xml.gz) 
 
 
 ## <a name="usage">usage</a> sample of an include section for the usage inside bnd/bndtools
