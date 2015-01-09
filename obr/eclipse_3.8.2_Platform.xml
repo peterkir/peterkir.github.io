@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
 
-<repository lastmodified='20150109090714.167' name='R-3.8.2-201301310800'>
+<repository lastmodified='20150109103110.493' name='R-3.8.2-201301310800'>
   <resource id='com.ibm.icu/4.4.2.v20110823' presentationname='International Components for Unicode for Java (ICU4J)' symbolicname='com.ibm.icu' uri='http://download.eclipse.org/eclipse/updates/3.8/R-3.8.2-201301310800/plugins/com.ibm.icu_4.4.2.v20110823.jar' version='4.4.2.v20110823'>
     <size>
       6701200

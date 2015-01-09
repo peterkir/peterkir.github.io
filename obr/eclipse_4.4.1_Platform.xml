@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
 
-<repository lastmodified='20150109090729.321' name='R-4.4.1-201409250400'>
+<repository lastmodified='20150109103129.594' name='R-4.4.1-201409250400'>
   <resource id='com.google.code.atinject.tck/1.0.0.v20140128-0851' presentationname='Tck' symbolicname='com.google.code.atinject.tck' uri='http://download.eclipse.org/eclipse/updates/4.4/R-4.4.1-201409250400/plugins/com.google.code.atinject.tck_1.0.0.v20140128-0851.jar' version='1.0.0.v20140128-0851'>
     <size>
       25729
