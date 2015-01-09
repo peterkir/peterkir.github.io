@@ -5,7 +5,7 @@
 
 copy the link locations below and reference them like [here](#usage) 
 
-- Eclipse Platform Release 3.8.2/4.2          [xml](eclipse_3.8.2_platform.xml) [gzip](eclipse_3.8.2_platform.xml.gz)
+- Eclipse Platform Release 3.8.2/4.2          [xml](eclipse_3.8.2_Platform.xml) [gzip](eclipse_3.8.2_Platform.xml.gz)
 - Eclipse Simultaneous Release Juno 3.8.2/4.2 [xml](eclipse_3.8.2_Juno.xml)     [gzip](eclipse_3.8.2_Juno.xml)
 - Eclipse Platform Release 4.4.0              [xml](eclipse_4.4.0_Platform.xml) [gzip](eclipse_4.4.0_Platform.xml.gz)
 - Eclipse Simultaneous Release 4.4.0 Luna     [xml](eclipse_4.4.0_Luna.xml)     [gzip](eclipse_4.4.0_Luna.xml.gz)
