@@ -1,37 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
 <?xml-stylesheet type='text/xsl' href='http://www.osgi.org/www/obr2html.xsl'?>
 
-<repository lastmodified='20150108160253.975' name='R-4.4-201406061215'>
-  <resource id='Untitled--1556571461/0.0.0' symbolicname='Untitled--1556571461' uri='http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215/features/org.eclipse.equinox.executable_3.6.100.v20140603-1326.jar' version='0.0.0'>
-    <size>
-      836342
-    </size>
-    <capability name='bundle'>
-      <p n='manifestversion' v='1'/>
-      <p n='symbolicname' v='Untitled--1556571461'/>
-      <p n='version' t='version' v='0.0.0'/>
-    </capability>
-  </resource>
-  <resource id='Untitled--63846800/0.0.0' symbolicname='Untitled--63846800' uri='http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215/features/org.eclipse.ecf.core.feature_1.1.0.v20140528-1625.jar' version='0.0.0'>
-    <size>
-      18575
-    </size>
-    <capability name='bundle'>
-      <p n='manifestversion' v='1'/>
-      <p n='symbolicname' v='Untitled--63846800'/>
-      <p n='version' t='version' v='0.0.0'/>
-    </capability>
-  </resource>
-  <resource id='Untitled-161924551/0.0.0' symbolicname='Untitled-161924551' uri='http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215/features/org.eclipse.core.runtime.feature_1.1.1.v20140606-1445.jar' version='0.0.0'>
-    <size>
-      17627
-    </size>
-    <capability name='bundle'>
-      <p n='manifestversion' v='1'/>
-      <p n='symbolicname' v='Untitled-161924551'/>
-      <p n='version' t='version' v='0.0.0'/>
-    </capability>
-  </resource>
+<repository lastmodified='20150109090722.384' name='R-4.4-201406061215'>
   <resource id='com.google.code.atinject.tck/1.0.0.v20140128-0851' presentationname='Tck' symbolicname='com.google.code.atinject.tck' uri='http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215/plugins/com.google.code.atinject.tck_1.0.0.v20140128-0851.jar' version='1.0.0.v20140128-0851'>
     <size>
       25729
