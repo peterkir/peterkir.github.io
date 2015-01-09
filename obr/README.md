@@ -4,12 +4,12 @@
 
 copy the link locations below and reference them like [here](#usage) 
 
-- Eclipse Platform Release 3.8.2/4.2          [origin](http://download.eclipse.org/eclipse/updates/3.8/R-3.8.2-201301310800) [xml](eclipse_3.8.2_Platform.xml)     [gzip](eclipse_3.8.2_Platform.xml.gz)
-- Eclipse Simultaneous Release Juno 3.8.2/4.2 [origin](http://download.eclipse.org/releases/juno/201303010900)               [xml](eclipse_3.8.2_Simultaneous.xml) [gzip](eclipse_3.8.2_Simultaneous.xml)
-- Eclipse Platform Release 4.4.0              [origin](http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215)   [xml](eclipse_4.4.0_Platform.xml)     [gzip](eclipse_4.4.0_Platform.xml.gz)
-- Eclipse Simultaneous Release 4.4.0 Luna     [origin](http://download.eclipse.org/releases/luna/201406250900)               [xml](eclipse_4.4.0_Simultaneous.xml) [gzip](eclipse_4.4.0_Simultaneous.xml.gz)
-- Eclipse Platform Release 4.4.1              [origin](http://download.eclipse.org/eclipse/updates/4.4/R-4.4.1-201409250400) [xml](eclipse_4.4.1_Platform.xml)     [gzip](eclipse_4.4.1_Platform.xml.gz)
-- Eclipse Simultaneous Release 4.4.1 Luna     [origin](http://download.eclipse.org/releases/luna/201409261001)               [xml](eclipse_4.4.1_Simultaneous.xml) [gzip](eclipse_4.4.1_Simultaneous.xml.gz) 
+- Eclipse Platform Release 3.8.2/4.2.2          [origin](http://download.eclipse.org/eclipse/updates/3.8/R-3.8.2-201301310800) [xml](eclipse_3.8.2_Platform.xml)     [gzip](eclipse_3.8.2_Platform.xml.gz)
+- Eclipse Simultaneous Release Juno 3.8.2/4.2.2 [origin](http://download.eclipse.org/releases/juno/201303010900)               [xml](eclipse_3.8.2_Simultaneous.xml) [gzip](eclipse_3.8.2_Simultaneous.xml)
+- Eclipse Platform Release 4.4.0                [origin](http://download.eclipse.org/eclipse/updates/4.4/R-4.4-201406061215)   [xml](eclipse_4.4.0_Platform.xml)     [gzip](eclipse_4.4.0_Platform.xml.gz)
+- Eclipse Simultaneous Release 4.4.0 Luna       [origin](http://download.eclipse.org/releases/luna/201406250900)               [xml](eclipse_4.4.0_Simultaneous.xml) [gzip](eclipse_4.4.0_Simultaneous.xml.gz)
+- Eclipse Platform Release 4.4.1                [origin](http://download.eclipse.org/eclipse/updates/4.4/R-4.4.1-201409250400) [xml](eclipse_4.4.1_Platform.xml)     [gzip](eclipse_4.4.1_Platform.xml.gz)
+- Eclipse Simultaneous Release 4.4.1 Luna       [origin](http://download.eclipse.org/releases/luna/201409261001)               [xml](eclipse_4.4.1_Simultaneous.xml) [gzip](eclipse_4.4.1_Simultaneous.xml.gz) 
 
 
 ## <a name="usage">usage</a> sample of an include section for the usage inside bnd/bndtools
