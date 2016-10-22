@@ -28,7 +28,17 @@ the following list contains the eclipse release repositories <b>origin</b> is th
 	- Platform     [origin](http://download.eclipse.org/eclipse/updates/4.4/R-4.4.1-201409250400) [xml](eclipse_4.4.1_Platform.xml)     [gzip](eclipse_4.4.1_Platform.xml.gz)
 	- Simultaneous [origin](http://download.eclipse.org/releases/luna/201409261001)               [xml](eclipse_4.4.1_Simultaneous.xml) [gzip](eclipse_4.4.1_Simultaneous.xml.gz) 
 
+- Eclipse Platform Release 4.6.0 
+	- Platform     [origin](http://download.eclipse.org/eclipse/updates/4.6/R-4.6-201606061100)   [gzip](eclipse_4.6.0_Platform.xml.gz)
+	- Simultaneous [origin](http://download.eclipse.org/releases/neon/201606221000/)              [gzip](eclipse_4.6.0_Simultaneous.xml.gz) 
 
+- Eclipse Platform Release 4.6.1
+	- Platform     [origin](http://download.eclipse.org/eclipse/updates/4.6/R-4.6.1-201609071200) [gzip](eclipse_4.6.1_Platform.xml.gz)
+	- Simultaneous [origin](http://download.eclipse.org/releases/neon/201609281000/)              [gzip](eclipse_4.6.1_Simultaneous.xml.gz) 
+
+	
+	
+	
 ## <a name="usage">usage</a> sample of an include section for the usage inside bnd/bndtools
 
 put the following section inside your bnd configuration (e.g. ext/repositories.bnd)
