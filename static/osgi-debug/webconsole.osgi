@@ -32,6 +32,7 @@ start org.apache.felix.webconsole.plugins.subsystems
 start org.apache.felix.webconsole.plugins.upnp
 start org.apache.felix.webconsole.plugins.useradmin
 start org.apache.felix.servicediagnostics.plugin
+start aQute.xray.plugin
 echo \# VERIFY with ss org.apache.felix 
 ss org.apache.felix 
 echo \# ANALYSE with ss -s installed
