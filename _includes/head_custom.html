@@ -1,0 +1,9 @@
+<script>
+// Apply theme before paint to prevent flash of unstyled content (FOUC)
+(function () {
+  var saved = localStorage.getItem('theme');
+  var preferred = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', saved || preferred);
+})();
+</script>
+<link rel="stylesheet" href="{{ '/assets/css/dark-mode.css' | relative_url }}">

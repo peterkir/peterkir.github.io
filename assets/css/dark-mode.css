@@ -1,0 +1,263 @@
+/*
+ * Dark mode support for just-the-docs v0.12
+ * Activates when data-theme="dark" on <html>, or via system preference
+ * when data-theme is not explicitly set to "light".
+ */
+
+/* ─── Color variables ─────────────────────────────────────────────────── */
+
+:root {
+  --dk-page-bg:       #ffffff;
+  --dk-sidebar-bg:    #f5f6fa;
+  --dk-body-text:     #27262b;
+  --dk-heading:       #27262b;
+  --dk-link:          #2869e6;
+  --dk-nav-link:      #5c5962;
+  --dk-border:        #eeebee;
+  --dk-code-bg:       #f5f6fa;
+  --dk-code-text:     #27262b;
+  --dk-table-head:    #f5f6fa;
+  --dk-header-bg:     rgba(255, 255, 255, 0.75);
+  --dk-toggle-border: #eeebee;
+  --dk-footer-bg:     #f5f6fa;
+}
+
+html[data-theme="dark"] {
+  --dk-page-bg:       #1b2024;
+  --dk-sidebar-bg:    #22262a;
+  --dk-body-text:     #d4d9e1;
+  --dk-heading:       #f5f6fa;
+  --dk-link:          #7253ed;
+  --dk-nav-link:      #959396;
+  --dk-border:        #44434d;
+  --dk-code-bg:       #31333a;
+  --dk-code-text:     #d4d9e1;
+  --dk-table-head:    #2b2d35;
+  --dk-header-bg:     rgba(27, 32, 36, 0.75);
+  --dk-toggle-border: #44434d;
+  --dk-footer-bg:     #22262a;
+}
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) {
+    --dk-page-bg:       #1b2024;
+    --dk-sidebar-bg:    #22262a;
+    --dk-body-text:     #d4d9e1;
+    --dk-heading:       #f5f6fa;
+    --dk-link:          #7253ed;
+    --dk-nav-link:      #959396;
+    --dk-border:        #44434d;
+    --dk-code-bg:       #31333a;
+    --dk-code-text:     #d4d9e1;
+    --dk-table-head:    #2b2d35;
+    --dk-header-bg:     rgba(27, 32, 36, 0.75);
+    --dk-toggle-border: #44434d;
+    --dk-footer-bg:     #22262a;
+  }
+}
+
+/* ─── Override just-the-docs styles ──────────────────────────────────── */
+
+body,
+.main-content-wrap,
+.main-content {
+  background-color: var(--dk-page-bg) !important;
+  color: var(--dk-body-text);
+}
+
+.side-bar {
+  background-color: var(--dk-sidebar-bg) !important;
+  border-right: 1px solid var(--dk-border) !important;
+}
+
+.site-title,
+.site-title:hover,
+.site-title:visited {
+  color: var(--dk-heading) !important;
+}
+
+.main-header {
+  background-color: var(--dk-header-bg) !important;
+  border-bottom: 1px solid var(--dk-border) !important;
+}
+
+.site-footer {
+  background-color: var(--dk-footer-bg);
+  border-top: 1px solid var(--dk-border) !important;
+  color: var(--dk-body-text);
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--dk-heading);
+}
+
+/* Links */
+a {
+  color: var(--dk-link);
+}
+
+a:visited {
+  color: var(--dk-link);
+}
+
+/* Navigation */
+.nav-list-link {
+  color: var(--dk-nav-link) !important;
+}
+
+.nav-list-link:hover,
+.nav-list-link.active {
+  color: var(--dk-heading) !important;
+  background-color: transparent;
+}
+
+.nav-list-item.active > .nav-list-link {
+  color: var(--dk-heading) !important;
+}
+
+.nav-list-expander svg {
+  fill: var(--dk-nav-link);
+}
+
+/* Code */
+code {
+  background-color: var(--dk-code-bg) !important;
+  color: var(--dk-code-text) !important;
+  border: 1px solid var(--dk-border);
+}
+
+pre,
+pre code,
+.highlight {
+  background-color: var(--dk-code-bg) !important;
+  color: var(--dk-code-text);
+  border-color: var(--dk-border);
+}
+
+pre code {
+  border: none;
+}
+
+/* Search */
+.search-input-wrap,
+.search-input-wrap .search-input {
+  background-color: var(--dk-sidebar-bg) !important;
+  color: var(--dk-body-text) !important;
+}
+
+.search-input-wrap .search-input::placeholder {
+  color: var(--dk-nav-link) !important;
+}
+
+.search-results-list-item {
+  background-color: var(--dk-sidebar-bg);
+  border-color: var(--dk-border);
+}
+
+.search-result {
+  border-bottom-color: var(--dk-border);
+  color: var(--dk-body-text);
+}
+
+.search-result-preview {
+  color: var(--dk-nav-link);
+}
+
+/* Tables */
+.main-content table {
+  background-color: var(--dk-page-bg);
+  color: var(--dk-body-text);
+}
+
+.main-content table th {
+  background-color: var(--dk-table-head) !important;
+  color: var(--dk-heading);
+  border-bottom-color: var(--dk-border);
+}
+
+.main-content table td {
+  border-top-color: var(--dk-border);
+}
+
+.main-content table tr:hover {
+  background-color: var(--dk-sidebar-bg);
+}
+
+/* Horizontal rules */
+hr {
+  border-color: var(--dk-border);
+}
+
+/* Blockquotes */
+blockquote {
+  color: var(--dk-nav-link);
+  border-left-color: var(--dk-border);
+}
+
+/* Buttons */
+.btn {
+  background-color: var(--dk-sidebar-bg);
+  color: var(--dk-body-text);
+  border-color: var(--dk-border);
+}
+
+.btn-primary {
+  background-color: var(--dk-link);
+  color: #ffffff;
+  border-color: var(--dk-link);
+}
+
+.btn:hover {
+  background-color: var(--dk-code-bg);
+}
+
+/* Labels */
+.label {
+  color: var(--dk-nav-link) !important;
+}
+
+/* ─── Build info footer ───────────────────────────────────────────────── */
+
+.build-info {
+  font-size: 0.7rem;
+  color: var(--dk-nav-link);
+  margin-top: 0.5rem;
+}
+
+.build-info a {
+  color: var(--dk-link);
+}
+
+/* ─── Theme toggle button ─────────────────────────────────────────────── */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--dk-toggle-border);
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 4px 8px;
+  color: var(--dk-body-text);
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}
+
+.theme-toggle:hover {
+  background-color: var(--dk-code-bg);
+}
+
+/* Show moon in light mode, sun in dark mode */
+.theme-toggle .sun-icon  { display: none; }
+.theme-toggle .moon-icon { display: inline; }
+
+html[data-theme="dark"] .theme-toggle .sun-icon  { display: inline; }
+html[data-theme="dark"] .theme-toggle .moon-icon { display: none; }
+
+@media (prefers-color-scheme: dark) {
+  html:not([data-theme="light"]) .theme-toggle .sun-icon  { display: inline; }
+  html:not([data-theme="light"]) .theme-toggle .moon-icon { display: none; }
+}
