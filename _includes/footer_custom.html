@@ -1,0 +1,7 @@
+{% if site.data.build_info %}
+<div class="build-info">
+  Built: {{ site.data.build_info.datetime }}
+  &bull;
+  SHA: <a href="https://github.com/peterkir/peterkir.github.io/commit/{{ site.data.build_info.sha }}" target="_blank" rel="noopener">{{ site.data.build_info.short_sha }}</a>
+</div>
+{% endif %}
