@@ -1,0 +1,54 @@
+<div class="nav-footer-qrcode">
+  <div id="qr-code-container"></div>
+  <p class="qr-label">Scan to visit this site</p>
+</div>
+
+<style>
+  .nav-footer-qrcode {
+    padding: 1rem 1rem 0.5rem 1rem;
+    text-align: center;
+    border-top: 1px solid #e0e0e0;
+    margin-top: 1rem;
+  }
+
+  #qr-code-container svg {
+    max-width: 120px;
+    height: auto;
+    border-radius: 4px;
+  }
+
+  .qr-label {
+    font-size: 0.65rem;
+    color: #999;
+    margin-top: 0.4rem;
+    margin-bottom: 0;
+  }
+
+  html[data-theme="dark"] .nav-footer-qrcode {
+    border-top-color: #444;
+  }
+
+  html[data-theme="dark"] .qr-label {
+    color: #888;
+  }
+</style>
+
+<script src="{{ 'assets/js/qrcode.js' | relative_url }}"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    var container = document.getElementById('qr-code-container');
+    if (!container || typeof qrcode !== 'function') {
+      return;
+    }
+
+    var siteUrl = '{{ site.url }}';
+    if (!siteUrl || siteUrl === '') {
+      siteUrl = window.location.origin + '{{ site.baseurl }}';
+    }
+
+    var qr = qrcode(0, 'M');
+    qr.addData(siteUrl);
+    qr.make();
+    container.innerHTML = qr.createSvgTag({ cellSize: 3, margin: 2, scalable: true });
+  });
+</script>

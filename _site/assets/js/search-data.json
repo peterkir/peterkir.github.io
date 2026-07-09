@@ -1,0 +1,198 @@
+{"0": {
+    "doc": "Dev Resources",
+    "title": "Development Resources",
+    "content": ". ",
+    "url": "/development.html#development-resources",
+    
+    "relUrl": "/development.html#development-resources"
+  },"1": {
+    "doc": "Dev Resources",
+    "title": "OSGi Bundle Repositories (OBR)",
+    "content": "Pre-built OSGi Bundle Repository index files for Eclipse releases, suitable for use with BndTools and Eclipse IDE setups. Browse OBR files . Available index files for Eclipse versions: 3.6.2, 3.7.2, 3.8.2, 4.3.2, 4.4.0, 4.4.1, 4.6.0, 4.6.1 (Platform and Simultaneous releases). ",
+    "url": "/development.html#osgi-bundle-repositories-obr",
+    
+    "relUrl": "/development.html#osgi-bundle-repositories-obr"
+  },"2": {
+    "doc": "Dev Resources",
+    "title": "OSGi Runtime Debugging",
+    "content": "Tools and configuration for debugging OSGi runtimes using the Apache Felix Web Console and related plugins. OSGi Debugging Setup . Includes Apache Felix plugins: . | Web Console | Declarative Services | Event Admin | Memory Usage | OBR Browser | Package Admin | Script Console | Subsystems | . ",
+    "url": "/development.html#osgi-runtime-debugging",
+    
+    "relUrl": "/development.html#osgi-runtime-debugging"
+  },"3": {
+    "doc": "Dev Resources",
+    "title": "Project Setups",
+    "content": ". | GitHub projects — OSGi and bnd/bndtools | GitHub projects — peterkir | . The idefix project setup links above point to the peterkir/idefix repository’s GitHub Pages site. ",
+    "url": "/development.html#project-setups",
+    
+    "relUrl": "/development.html#project-setups"
+  },"4": {
+    "doc": "Dev Resources",
+    "title": "Active GitHub Repositories",
+    "content": "Original repositories for developers, sorted by last update (newest first). For detailed project information and to contribute, visit the respective GitHub repository. Core Development Tools . vscode-bnd-plugin . Visual Studio Code extension providing rich language support for bnd (.bnd) and bndrun (.bndrun) files. Includes LSP support, TextMate grammar, and OSGi tooling integration. Updated: July 1, 2026 · Language: TypeScript Technologies: VS Code Extension, LSP, Node.js, bnd/bndtools toolchain . lecture-template . Template for creating educational lecture materials and presentations. Updated: June 18, 2026 · Languages: HTML, CSS, JavaScript Technologies: HTML5, CSS3, JavaScript . vscode-jdk-config . VS Code extension to configure and manage JRE/JDK settings within the editor. Updated: April 27, 2026 · Language: TypeScript Technologies: VS Code Extension API, TypeScript, JDK/JRE Configuration License: Eclipse Public License 2.0 . bugfix.org.eclipse.paho.mqttv5.client . OSGi wrapper for Eclipse Paho MQTT v5 client library for non-fully-OSGi-compatible bundles. Updated: April 13, 2026 · Language: Java Technologies: MQTT v5, Eclipse Paho, OSGi, Bundle Wrapping . Personal Projects &amp; Infrastructure . peterkir.github.io . Repository for this GitHub Pages website with Jekyll-based static site generation. Updated: April 7, 2026 · Languages: JavaScript, HTML, CSS, Markdown Technologies: Jekyll, GitHub Pages, Markdown, Just the Docs Theme License: Eclipse Public License 1.0 · Stars: 1 . Examples &amp; Templates . tycho-example . Example project demonstrating Tycho for Eclipse plugin development with Maven. Updated: April 2, 2026 · Languages: Java, XML Technologies: Eclipse, Tycho, Maven, OSGi, Eclipse PDE . example.javafx . Example JavaFX application demonstrating desktop GUI development with Java. Updated: February 20, 2026 · Language: Java Technologies: Java, JavaFX GUI Framework License: Eclipse Public License 2.0 . bnd-workspace-template . Workspace template for bnd/bndtools projects with Gradle build system. Updated: February 17, 2026 · Languages: Java, Gradle, XML Technologies: bnd/bndtools, Gradle, OSGi, Java License: Apache License 2.0 . ",
+    "url": "/development.html#active-github-repositories",
+    
+    "relUrl": "/development.html#active-github-repositories"
+  },"5": {
+    "doc": "Dev Resources",
+    "title": "klibio Organization Repositories",
+    "content": "Original repositories from the Kirschners GmbH (klibio) organization, sorted by last update (newest first). Examples &amp; Education . example.pde.rcp . Showcase Eclipse RCP application developed with PDE and Maven Tycho. Updated: July 3, 2026 · Language: Java Technologies: Eclipse PDE, Maven Tycho, RCP, Java License: Eclipse Public License 2.0 · Stars: 2 . example.bnd.rcp . Eclipse RCP application examples with bndtools. Updated: June 25, 2026 · Language: Java Technologies: bndtools, Eclipse RCP, Java, OSGi Stars: 7 · Forks: 6 · Issues: 2 . Development Infrastructure &amp; Tools . bootstrap . Setup scripts for Java developer machine configuration and environment provisioning. Updated: March 30, 2026 · Language: Shell Technologies: Shell scripting, Java development environment setup License: MIT License · Stars: 1 . apps . Java applications repository and collection. Updated: March 26, 2026 · Language: Java Technologies: Java, OSGi License: Eclipse Public License 2.0 . mvn.deploy.bnd . Maven deployment scripts for bnd/bndtools projects. Updated: March 2, 2026 · Language: Shell Technologies: Maven, bnd, Shell scripting . mvn.deploy.java . Evaluation of Sonatype Maven Central Deployment for Java projects. Updated: January 4, 2026 · Language: Java Technologies: Maven, Java, Sonatype Maven Central . cdn . Content Delivery Network resources and configuration. Updated: December 17, 2025 · Language: CSS Technologies: CSS, CDN . bnd . Bnd/Bndtools – Comprehensive tooling to build OSGi bundles with Eclipse, Maven, and Gradle plugins. Core build system for OSGi development. Updated: August 18, 2025 · Language: Java Technologies: OSGi, bnd/bndtools, Maven, Gradle, Eclipse, Manifest processing Stars: 0 · Forks: 300 . System Management &amp; Eclipse Tools . EclipseInstallationManager . Tool to manage Eclipse Application installations with the official Eclipse Installer. Updated: August 17, 2025 · Language: Java Technologies: Eclipse, Eclipse Installer, Java License: Eclipse Public License 2.0 . eclipse-oomph-console . Console Oomph Installer – Eclipse plugin for console-based IDE installation and provisioning. Updated: April 12, 2024 · Language: Java Technologies: Eclipse, Oomph, Plugin development, Java License: Eclipse Public License 2.0 · Forks: 4 . eclipse-oomph-console-site . P2 plugin repository for Console Oomph Installer distribution. Updated: April 3, 2024 · Technologies: P2 Repository, Eclipse Update Site, XML Forks: 1 . bndtools . Bnd/Bndtools Eclipse IDE integration – Tooling for building OSGi bundles with rich IDE support. Updated: March 20, 2024 · Language: Java Technologies: Eclipse IDE, bndtools, OSGi, Plugin development Stars: 0 · Forks: 300 . ecd . Eclipse Class Decompiler – Eclipse plugin integrating multiple class decompilers (JD, CFR, Procyon) into the Eclipse development workflow. Updated: March 16, 2024 · Language: Java Technologies: Eclipse Plugin, Class Decompiler, JD, CFR, Procyon License: Eclipse Public License 1.0 · Forks: 61 . Docker &amp; Containers . docker-baseimage-gui . Minimal Docker baseimage for X graphical applications in containers with lightweight setup. Updated: August 31, 2024 · Language: C++ Technologies: Docker, X11, GUI applications, Alpine Linux License: MIT License · Forks: 204 . docker-eclipse . Docker container for Eclipse IDE with complete development environment. Updated: December 6, 2022 · Language: Shell Technologies: Docker, Shell, Eclipse IDE License: Eclipse Public License 2.0 · Stars: 2 . docker-osgi-starterkit . Docker container providing Eclipse Equinox OSGi starter kits and examples. Updated: September 8, 2021 · Language: Shell Technologies: Docker, Shell, Eclipse Equinox, OSGi License: Eclipse Public License 2.0 . ",
+    "url": "/development.html#klibio-organization-repositories",
+    
+    "relUrl": "/development.html#klibio-organization-repositories"
+  },"6": {
+    "doc": "Dev Resources",
+    "title": "Historical Projects",
+    "content": "Original repositories from klibio organization (2016–2023), archived and maintained for reference. Docker &amp; Infrastructure . docker-ubuntu-vnc-desktop . Docker image providing web VNC interface to access Ubuntu LXDE/LxQT desktop environment. Updated: April 4, 2021 · Language: HTML Technologies: Docker, VNC, Ubuntu, LXDE, LxQT License: Apache License 2.0 · Forks: 1.5k . cypht-docker . Docker image for Cypht email client setup and deployment. Updated: November 29, 2023 · Language: Shell Technologies: Docker, Cypht, Email Client, Shell scripting License: GNU General Public License v2.0 · Forks: 25 . docker-github-runner . GitHub Actions runner Docker image with docker-compose configuration. Updated: January 6, 2023 · Language: Shell Technologies: Docker, GitHub Actions, CI/CD, docker-compose . io.klib.tinyproxy . TinyProxy Docker container using Alpine Linux for lightweight proxy deployment. Updated: January 27, 2020 · Language: Dockerfile Technologies: Docker, TinyProxy, Alpine Linux, HTTP Proxy License: MIT License · Forks: 14 . io.klib.docker.java . Docker Java runtime container for containerized Java applications. Updated: December 6, 2018 · Language: Java Technologies: Docker, Java Runtime, Containerization . io.klib.docker.builder . Docker-based build system using mounted directories for project compilation. Updated: December 3, 2019 · Language: Java Technologies: Docker, Java Build, Maven, Container build patterns . io.klib.forwarding-ssl-proxy . SSL proxy for forwarding connections with certificate handling. Updated: November 19, 2019 · Language: Dockerfile Technologies: Docker, SSL/TLS, Proxy, Networking . io.klib.docker.osgi.tut . Docker-based OSGi tutorial and examples for containerized OSGi development. Updated: January 21, 2022 · Language: Java Technologies: Docker, OSGi, Eclipse Equinox, Tutorial Stars: 1 . Eclipse &amp; OSGi Tools . eclipse-oomph-console-site . P2 plugin repository for Console Oomph Installer distribution. Updated: April 3, 2024 · Technologies: P2 Repository, Eclipse Update Site . LogViewer . Eclipse plugin for tailing log files and console output with syntax coloring. Updated: November 20, 2021 · Language: Java Technologies: Eclipse Plugin, Log Viewer, Syntax Highlighting License: Eclipse Public License 2.0 · Forks: 8 . oomph-task-unzip . Oomph Task plugin for unzipping archives during Eclipse IDE provisioning. Updated: March 26, 2020 · Language: Java Technologies: Eclipse Oomph, Task plugin, Archive handling License: Eclipse Public License 1.0 · Forks: 3 . xmind . Popular mind mapping software for creating and organizing mind maps. Updated: July 28, 2020 · Language: Java Technologies: Mind Mapping, JavaFX, Visualization, Brainstorming Forks: 502 . AsciidocFX . Asciidoc editor and publishing toolchain written with JavaFX for creating books, documents, and slides. Updated: April 7, 2020 · Language: Java Technologies: Asciidoc, JavaFX, PDF/EPUB/Mobi generation, Documentation License: Apache License 2.0 · Forks: 302 . Java Libraries &amp; Tools . zip4j . Java library for handling zip files and streams with advanced compression support. Updated: August 9, 2022 · Language: Java Technologies: ZIP compression, Java library, File handling License: Apache License 2.0 · Forks: 325 . io.klib.tools . Java development tools and utilities library. Updated: July 2, 2022 · Language: Java Technologies: Java utilities, Development tools Stars: 1 · Forks: 1 . io.klib.osgi.etcd . OSGi Bundle wrapper for etcd distributed configuration management. Updated: February 19, 2018 · Languages: Multiple Technologies: OSGi, etcd, Configuration Management, Bundle wrapping License: Apache License 2.0 . io.klib.util . Utility classes and helper functions for Java development. Updated: July 20, 2017 · Language: HTML Technologies: Java utilities, Helper library . io.klib.aries.example . Apache Aries example for OSGi dependency injection and services. Updated: January 24, 2023 · Language: Java Technologies: Apache Aries, OSGi, Dependency Injection, Service Model . io.klib.process.log.tooling . Log tailer and listener implementation with subprocess process handling. Updated: February 9, 2021 · Language: Java Technologies: Log processing, Process management, Java utilities . jpmcli . JPM command-line interface tool for Java package management. Updated: October 26, 2020 · Language: Java Technologies: Java package management, CLI, bnd integration License: Apache License 2.0 · Forks: 10 . org.klib.io.bnd.example . Bnd example project demonstrating OSGi bundle development practices. Updated: November 5, 2018 · Language: Java Technologies: bnd, OSGi bundles, Maven, Example project . ee.j2se-version-11 . Wrapper for AdoptOpenJDK 11 as OSGi build bundle. Updated: February 25, 2020 · Language: Java Technologies: OSGi, JDK wrapping, AdoptOpenJDK, Build bundle License: Apache License 2.0 . Cloud &amp; Infrastructure . vaultwarden . Unofficial Bitwarden-compatible server written in Rust, formerly known as bitwarden_rs. Updated: February 27, 2022 · Language: Rust Technologies: Bitwarden, Password Manager, Rust, Server License: GNU General Public License v3.0 · Forks: 3k . io.klib.terraform . Terraform infrastructure configuration examples for cloud deployment. Updated: March 8, 2020 · Language: HCL Technologies: Terraform, Infrastructure as Code, Cloud provisioning . io.klib.istio . Istio service mesh configuration examples and templates. Updated: February 29, 2020 · Languages: Multiple Technologies: Istio, Service Mesh, Kubernetes, Networking . io.klib.netconnect . Network connectivity utilities and diagnostic tools. Updated: January 27, 2020 · Language: Shell Technologies: Networking, Network diagnostics, Shell utilities . io.klib.helm . Helm chart examples and utilities for Kubernetes deployments. Updated: January 26, 2020 · Language: Smarty Technologies: Helm, Kubernetes, Chart templates . klib.cluster . Clustering utilities for distributed applications and cluster management. Updated: October 21, 2019 · Languages: Multiple Technologies: Clustering, Distributed systems, High availability . Examples &amp; Evaluation Projects . bndtools-klibio-templates . Bndtools project templates for klibio OSGi development workflows. Updated: March 31, 2023 · Language: Java Technologies: bndtools, OSGi, Templates, Maven License: Other . bndtools-eclipse-workspace . Eclipse workspace configuration for bndtools development environment. Updated: March 30, 2023 · Languages: Mixed Technologies: bndtools, Eclipse, Workspace configuration License: Other . io.klib.flux . OSGi bundle implementation of reactive flux pattern. Updated: March 14, 2023 · Language: Java Technologies: OSGi, Reactive programming, Flux pattern . github-actions-eval . Evaluation and testing of GitHub Actions CI/CD capabilities. Updated: January 11, 2023 · Languages: Multiple Technologies: GitHub Actions, CI/CD, Workflow automation . tycho-demo . Maven Tycho demonstration project for Eclipse plugin development. Updated: November 23, 2018 · Language: HTML Technologies: Maven Tycho, Eclipse PDE, RCP, Build automation Forks: 30 . osgi.enroute.bundles . OSGi enRoute bundles with simple implementations for OSGi learning and examples. Updated: May 9, 2016 · Language: JavaScript Technologies: OSGi, enRoute, Bundles, Educational examples Forks: 23 . pipelines-java . Sample Java application referenced by Azure Pipelines documentation. Updated: July 4, 2019 · Language: Java Technologies: Java, Azure Pipelines, CI/CD, Sample application License: Creative Commons Attribution 4.0 International · Forks: 11k . oidc-workshop-spring-io-2019 . Workshop materials for “Securing Microservices with OpenID Connect and Spring Security 5.1” presented at Spring I/O 2019. Updated: May 18, 2019 · Language: JavaScript Technologies: OpenID Connect, Spring Security, Microservices, OAuth License: Apache License 2.0 · Forks: 15 . eval-jenkinsx-springboot . Evaluation project for Jenkins X with Spring Boot microservices. Updated: April 26, 2019 · Language: Makefile Technologies: Jenkins X, Spring Boot, Kubernetes, CI/CD . klib.trackr . Project tracking application for managing tasks and project metrics. Updated: May 28, 2019 · Language: Java Technologies: Project tracking, Java, Issue management . azure-voting-app-redis . Azure voting application example using Redis for Azure documentation. Updated: April 24, 2019 · Language: Shell Technologies: Azure, Redis, Docker, Sample application License: MIT License · Forks: 3.5k . drawio . Source repository for draw.io diagram and flowchart application. Updated: April 24, 2019 · Language: JavaScript Technologies: Diagramming, flowcharts, SVG, Visualization License: Apache License 2.0 · Forks: 7.3k . Website &amp; Organization . klibio.github.io . klibio organization website and GitHub Pages repository. Updated: September 23, 2021 · Languages: Multiple Technologies: GitHub Pages, Jekyll, Website Forks: 1 . ",
+    "url": "/development.html#historical-projects",
+    
+    "relUrl": "/development.html#historical-projects"
+  },"7": {
+    "doc": "Dev Resources",
+    "title": "Technology Stack Overview",
+    "content": "Repository Summary . | Organization | Active (2024+) | Historical | Total | . | peterkir | 8 | — | 8 | . | klibio | 16 | 43 | 59 | . | Total | 24 | 43 | 67 | . Primary Languages (All Repositories) . | Language | Count | Percentage | . | Java | 25 | 37% | . | Shell | 10 | 15% | . | TypeScript | 2 | 3% | . | JavaScript | 4 | 6% | . | HTML/CSS | 3 | 4% | . | Rust | 1 | 1% | . | HCL/Terraform | 1 | 1% | . | Docker/Dockerfile | 5 | 7% | . | Multiple | 11 | 16% | . | Other | 5 | 7% | . Most Used Technologies &amp; Frameworks . | Technology | Usage | Count | . | OSGi Framework | Middleware, Modularity | 12 | . | Eclipse IDE/RCP/PDE | IDE Platform, Tooling | 15 | . | bnd/bndtools | OSGi Build System | 8 | . | Maven/Tycho | Build Automation | 10 | . | Docker | Containerization | 12 | . | Java | Core Language | 25 | . | Spring Framework | Web &amp; Microservices | 3 | . | Kubernetes/Helm | Orchestration | 4 | . | VS Code Extensions | Editor Support | 2 | . | Git/GitHub | Version Control, CI/CD | All | . Licenses Distribution . | License | Count | . | Eclipse Public License 2.0 | 12 | . | Apache License 2.0 | 6 | . | MIT License | 4 | . | GNU General Public License | 2 | . | Eclipse Public License 1.0 | 2 | . | Creative Commons / Other | 3 | . | Unspecified/Mixed | 36 | . For complete project information, version details, and contribution guidelines, visit the individual repositories on GitHub. This documentation is updated regularly to reflect the latest active development. ",
+    "url": "/development.html#technology-stack-overview",
+    
+    "relUrl": "/development.html#technology-stack-overview"
+  },"8": {
+    "doc": "Dev Resources",
+    "title": "Dev Resources",
+    "content": " ",
+    "url": "/development.html",
+    
+    "relUrl": "/development.html"
+  },"9": {
+    "doc": "EclipseCon Europe 2008",
+    "title": "EclipseCon Europe 2008",
+    "content": " ",
+    "url": "/talks/ece2008.html",
+    
+    "relUrl": "/talks/ece2008.html"
+  },"10": {
+    "doc": "EclipseCon Europe 2008",
+    "title": "Open System Engineering Environment: An Integrated Solution",
+    "content": "Early work on integrated tooling for embedded system engineering within Eclipse. The original slides link (eclipsecon.org/summiteurope2008) is no longer available — the Eclipse Summit Europe 2008 website has been taken down. ",
+    "url": "/talks/ece2008.html#open-system-engineering-environment-an-integrated-solution",
+    
+    "relUrl": "/talks/ece2008.html#open-system-engineering-environment-an-integrated-solution"
+  },"11": {
+    "doc": "EclipseCon Europe 2014",
+    "title": "EclipseCon Europe 2014",
+    "content": " ",
+    "url": "/talks/ece2014.html",
+    
+    "relUrl": "/talks/ece2014.html"
+  },"12": {
+    "doc": "EclipseCon Europe 2014",
+    "title": "An Epic Split Between OSGi Tooling Eclipse PDE and BndTools",
+    "content": "Explores the differences between Eclipse PDE and BndTools for OSGi development, and how to use both in a mixed-mode setup. | Interactive slides | Slides (PDF) | Video on YouTube 📹 | Source code on GitHub | . ",
+    "url": "/talks/ece2014.html#an-epic-split-between-osgi-tooling-eclipse-pde-and-bndtools",
+    
+    "relUrl": "/talks/ece2014.html#an-epic-split-between-osgi-tooling-eclipse-pde-and-bndtools"
+  },"13": {
+    "doc": "EclipseCon Europe 2016",
+    "title": "EclipseCon Europe 2016",
+    "content": " ",
+    "url": "/talks/ece2016.html",
+    
+    "relUrl": "/talks/ece2016.html"
+  },"14": {
+    "doc": "EclipseCon Europe 2016",
+    "title": "Building Nano Services with OSGi Declarative Services",
+    "content": "Tutorial covering OSGi Declarative Services pattern for building modular, loosely-coupled Java applications. | Slides (PDF) | Exercise slides presentation | Exercise source code on GitHub | . ",
+    "url": "/talks/ece2016.html#building-nano-services-with-osgi-declarative-services",
+    
+    "relUrl": "/talks/ece2016.html#building-nano-services-with-osgi-declarative-services"
+  },"15": {
+    "doc": "EclipseCon Europe 2017",
+    "title": "EclipseCon Europe 2017",
+    "content": " ",
+    "url": "/talks/ece2017.html",
+    
+    "relUrl": "/talks/ece2017.html"
+  },"16": {
+    "doc": "EclipseCon Europe 2017",
+    "title": "Eclipse RCP with bndtools",
+    "content": "How to build Eclipse RCP applications using bndtools instead of Eclipse PDE. | Source code on GitHub | . The ECE2017 slides PDF was originally hosted on eclipsecon.org/europe2017, which is no longer accessible. The same slides were also used for the OSGi User Forum Germany 2017 workshop. ",
+    "url": "/talks/ece2017.html#eclipse-rcp-with-bndtools",
+    
+    "relUrl": "/talks/ece2017.html#eclipse-rcp-with-bndtools"
+  },"17": {
+    "doc": "Home",
+    "title": "Peter Kirschner’s GitHub Site",
+    "content": "OSGi &amp; Eclipse enthusiast, Java developer, and conference speaker. ",
+    "url": "/#peter-kirschners-github-site",
+    
+    "relUrl": "/#peter-kirschners-github-site"
+  },"18": {
+    "doc": "Home",
+    "title": "Talks",
+    "content": "Conference presentations on OSGi, Eclipse RCP, bndtools, and IoT. View all talks . ",
+    "url": "/#talks",
+    
+    "relUrl": "/#talks"
+  },"19": {
+    "doc": "Home",
+    "title": "Development Resources",
+    "content": "OSGi bundle repositories and debugging tools. View development resources . ",
+    "url": "/#development-resources",
+    
+    "relUrl": "/#development-resources"
+  },"20": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    
+    "relUrl": "/"
+  },"21": {
+    "doc": "Java Forum Stuttgart 2016",
+    "title": "Java Forum Stuttgart 2016",
+    "content": " ",
+    "url": "/talks/jfs2016.html",
+    
+    "relUrl": "/talks/jfs2016.html"
+  },"22": {
+    "doc": "Java Forum Stuttgart 2016",
+    "title": "Jumpstart IoT in Java with OSGi enRoute",
+    "content": "Introduction to building IoT applications in Java using the OSGi enRoute framework. | Interactive slides | Slides (PDF) | . ",
+    "url": "/talks/jfs2016.html#jumpstart-iot-in-java-with-osgi-enroute",
+    
+    "relUrl": "/talks/jfs2016.html#jumpstart-iot-in-java-with-osgi-enroute"
+  },"23": {
+    "doc": "OSGi User Forum Germany 2017",
+    "title": "OSGi User Forum Germany Tooling Workshop 2017",
+    "content": " ",
+    "url": "/talks/osgi-forum-2017.html#osgi-user-forum-germany-tooling-workshop-2017",
+    
+    "relUrl": "/talks/osgi-forum-2017.html#osgi-user-forum-germany-tooling-workshop-2017"
+  },"24": {
+    "doc": "OSGi User Forum Germany 2017",
+    "title": "How to Build Eclipse Products from bndtools Bundles",
+    "content": "Hands-on workshop demonstrating the complete bndtools-based Eclipse RCP build workflow. | Source code on GitHub | . ",
+    "url": "/talks/osgi-forum-2017.html#how-to-build-eclipse-products-from-bndtools-bundles",
+    
+    "relUrl": "/talks/osgi-forum-2017.html#how-to-build-eclipse-products-from-bndtools-bundles"
+  },"25": {
+    "doc": "OSGi User Forum Germany 2017",
+    "title": "OSGi User Forum Germany 2017",
+    "content": " ",
+    "url": "/talks/osgi-forum-2017.html",
+    
+    "relUrl": "/talks/osgi-forum-2017.html"
+  },"26": {
+    "doc": "Talks",
+    "title": "Conference Talks",
+    "content": "Conference presentations on OSGi, Eclipse RCP, bndtools, and IoT by Peter Kirschner. ",
+    "url": "/talks.html#conference-talks",
+    
+    "relUrl": "/talks.html#conference-talks"
+  },"27": {
+    "doc": "Talks",
+    "title": "Talks",
+    "content": " ",
+    "url": "/talks.html",
+    
+    "relUrl": "/talks.html"
+  }
+}

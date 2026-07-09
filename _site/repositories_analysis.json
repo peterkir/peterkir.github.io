@@ -1,0 +1,714 @@
+{
+  "metadata": {
+    "user": "peterkir",
+    "totalRepositories": 149,
+    "analysisDate": "2026-07-07",
+    "analyzedCount": 20,
+    "sortedBy": "lastUpdate",
+    "timeRange": "2025-2026",
+    "scope": "source repositories only"
+  },
+  "repositories": [
+    {
+      "rank": 1,
+      "name": "vscode-bnd-plugin",
+      "url": "https://github.com/peterkir/vscode-bnd-plugin",
+      "description": "Visual Studio Code extension providing rich language support for bnd (.bnd) and bndrun (.bndrun) files used in OSGi development with bnd/bndtools",
+      "primaryLanguages": ["TypeScript", "JavaScript"],
+      "technologies": [
+        "Visual Studio Code Extension",
+        "Language Server Protocol (LSP)",
+        "Node.js",
+        "TextMate Grammar",
+        "bnd/bndtools",
+        "OSGi"
+      ],
+      "frameworks": [
+        "VS Code LSP",
+        "bnd/bndtools toolchain"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-07-01",
+      "daysOld": 6,
+      "isForked": false,
+      "originalRepository": null,
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "vscode",
+        "vscode-extension",
+        "bnd",
+        "bndtools",
+        "osgi",
+        "language-server"
+      ]
+    },
+    {
+      "rank": 2,
+      "name": "bnd",
+      "url": "https://github.com/peterkir/bnd",
+      "description": "Bnd/Bndtools. Tooling to build OSGi bundles including Eclipse, Maven, and Gradle plugins",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "OSGi",
+        "Eclipse",
+        "Maven Plugin",
+        "Gradle Plugin",
+        "Build Tools",
+        "Bundle Management"
+      ],
+      "frameworks": [
+        "OSGi Framework",
+        "Maven",
+        "Gradle",
+        "Eclipse IDE"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-06-27",
+      "daysOld": 10,
+      "isForked": true,
+      "originalRepository": "bndtools/bnd",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "osgi",
+        "bnd",
+        "bndtools",
+        "bundle",
+        "maven",
+        "gradle"
+      ]
+    },
+    {
+      "rank": 3,
+      "name": "lecture-template",
+      "url": "https://github.com/peterkir/lecture-template",
+      "description": "Template for creating educational lecture materials",
+      "primaryLanguages": ["HTML", "CSS", "JavaScript"],
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Web Framework"
+      ],
+      "frameworks": [
+        "Web-based presentation framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-06-18",
+      "daysOld": 19,
+      "isForked": false,
+      "originalRepository": null,
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "education",
+        "lecture",
+        "template",
+        "teaching"
+      ]
+    },
+    {
+      "rank": 4,
+      "name": "osgi",
+      "url": "https://github.com/peterkir/osgi",
+      "description": "OSGi Specification Project Build Repository. Specification, API, implementation, and TCK source code",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "OSGi Framework",
+        "OSGi Specification",
+        "Java",
+        "Maven",
+        "Test Suite (TCK)"
+      ],
+      "frameworks": [
+        "OSGi Framework",
+        "Maven Build System"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-06-08",
+      "daysOld": 29,
+      "isForked": true,
+      "originalRepository": "osgi/osgi",
+      "license": "Apache License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "osgi",
+        "specification",
+        "java",
+        "framework"
+      ]
+    },
+    {
+      "rank": 5,
+      "name": "v2archive.osgi.enroute",
+      "url": "https://github.com/peterkir/v2archive.osgi.enroute",
+      "description": "An archive of the OSGi enRoute v2 repo. This enRoute v2 archive repo is kept as a resource for those already using OSGi enRoute v2. If you are new to OSGi enRoute, then please start with the latest",
+      "primaryLanguages": ["JavaScript", "HTML", "CSS"],
+      "technologies": [
+        "OSGi enRoute",
+        "JavaScript",
+        "Web Development",
+        "Node.js"
+      ],
+      "frameworks": [
+        "OSGi enRoute v2",
+        "Node.js"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-05-25",
+      "daysOld": 43,
+      "isForked": true,
+      "originalRepository": "osgi/v2archive.osgi.enroute",
+      "license": "Apache License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "osgi",
+        "enroute",
+        "archive",
+        "javascript"
+      ]
+    },
+    {
+      "rank": 6,
+      "name": "photoprism",
+      "url": "https://github.com/peterkir/photoprism",
+      "description": "AI-Powered Photos App for the Decentralized Web 🌈💎✨",
+      "primaryLanguages": ["Go"],
+      "technologies": [
+        "Go/Golang",
+        "AI/ML",
+        "Photo Management",
+        "Web Application",
+        "Decentralized Web"
+      ],
+      "frameworks": [
+        "Go Web Framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-29",
+      "daysOld": 69,
+      "isForked": true,
+      "originalRepository": "photoprism/photoprism",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "go",
+        "ai",
+        "photos",
+        "decentralized",
+        "web"
+      ]
+    },
+    {
+      "rank": 7,
+      "name": "vscode-jdk-config",
+      "url": "https://github.com/peterkir/vscode-jdk-config",
+      "description": "Configure JRE in VS Code",
+      "primaryLanguages": ["TypeScript", "JavaScript"],
+      "technologies": [
+        "VS Code Extension",
+        "Java Development Kit (JDK)",
+        "Java Runtime Environment (JRE)",
+        "TypeScript"
+      ],
+      "frameworks": [
+        "VS Code Extension API"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-27",
+      "daysOld": 71,
+      "isForked": false,
+      "originalRepository": null,
+      "license": "Eclipse Public License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "vscode",
+        "vscode-extension",
+        "java",
+        "jdk",
+        "configuration"
+      ]
+    },
+    {
+      "rank": 8,
+      "name": "bndtools.runtime.eclipse",
+      "url": "https://github.com/peterkir/bndtools.runtime.eclipse",
+      "description": "Runtime OSGi bundles for use with an Eclipse Application",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "OSGi",
+        "Eclipse",
+        "bndtools",
+        "Java",
+        "Eclipse RCP"
+      ],
+      "frameworks": [
+        "OSGi Framework",
+        "Eclipse IDE",
+        "bndtools"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-27",
+      "daysOld": 71,
+      "isForked": true,
+      "originalRepository": "njbartlett/bndtools.runtime.eclipse",
+      "stars": 2,
+      "forks": 1,
+      "topics": [
+        "osgi",
+        "eclipse",
+        "bndtools",
+        "java",
+        "runtime"
+      ]
+    },
+    {
+      "rank": 9,
+      "name": "FastHotkey",
+      "url": "https://github.com/peterkir/FastHotkey",
+      "description": "Global hotkey library for Java via JNI. System-wide hotkeys even when app is not focused. Windows native API",
+      "primaryLanguages": ["C++", "Java"],
+      "technologies": [
+        "Java",
+        "C++",
+        "JNI (Java Native Interface)",
+        "Windows API",
+        "Native Library",
+        "Hotkeys"
+      ],
+      "frameworks": [
+        "JNI",
+        "Windows Native API"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-22",
+      "daysOld": 76,
+      "isForked": true,
+      "originalRepository": "andrestubbe/FastHotkey",
+      "license": "MIT License",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "java",
+        "cpp",
+        "jni",
+        "hotkey",
+        "windows",
+        "native"
+      ]
+    },
+    {
+      "rank": 10,
+      "name": "bugfix.org.eclipse.paho.mqttv5.client",
+      "url": "https://github.com/peterkir/bugfix.org.eclipse.paho.mqttv5.client",
+      "description": "Wrapping libraries or bundles which are not fully OSGi compatible",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "MQTT v5",
+        "Eclipse Paho",
+        "OSGi",
+        "Java",
+        "Bundle Wrapping"
+      ],
+      "frameworks": [
+        "OSGi Framework",
+        "Eclipse Paho MQTT"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-13",
+      "daysOld": 85,
+      "isForked": false,
+      "originalRepository": null,
+      "topics": [
+        "mqtt",
+        "osgi",
+        "eclipse",
+        "paho",
+        "bundle"
+      ]
+    },
+    {
+      "rank": 11,
+      "name": "peterkir.github.io",
+      "url": "https://github.com/peterkir/peterkir.github.io",
+      "description": "Repository for website github.io",
+      "primaryLanguages": ["JavaScript", "HTML", "CSS", "Markdown"],
+      "technologies": [
+        "Jekyll",
+        "GitHub Pages",
+        "HTML5",
+        "CSS3",
+        "JavaScript",
+        "Markdown"
+      ],
+      "frameworks": [
+        "Jekyll Static Site Generator",
+        "Just the Docs Theme"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-07",
+      "daysOld": 91,
+      "isForked": false,
+      "originalRepository": null,
+      "license": "Eclipse Public License 1.0",
+      "stars": 1,
+      "forks": null,
+      "topics": [
+        "jekyll",
+        "github-pages",
+        "personal-website",
+        "documentation"
+      ]
+    },
+    {
+      "rank": 12,
+      "name": "jpmcli",
+      "url": "https://github.com/peterkir/jpmcli",
+      "description": "JPM command line interface tool",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "Java",
+        "Command Line Interface (CLI)",
+        "JPM (jpm package manager)",
+        "Package Management"
+      ],
+      "frameworks": [
+        "JPM Command Line Framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-04",
+      "daysOld": 94,
+      "isForked": true,
+      "originalRepository": "bndtools/jpmcli",
+      "license": "Apache License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "java",
+        "cli",
+        "jpm",
+        "package-manager"
+      ]
+    },
+    {
+      "rank": 13,
+      "name": "tycho-example",
+      "url": "https://github.com/peterkir/tycho-example",
+      "description": "Example project demonstrating Tycho for Eclipse plugin development",
+      "primaryLanguages": ["Java", "XML"],
+      "technologies": [
+        "Eclipse",
+        "Tycho",
+        "Maven",
+        "OSGi",
+        "Eclipse PDE",
+        "Plugin Development"
+      ],
+      "frameworks": [
+        "Tycho (Eclipse Maven Tycho)",
+        "Maven",
+        "Eclipse IDE"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-02",
+      "daysOld": 96,
+      "isForked": false,
+      "originalRepository": null,
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "eclipse",
+        "tycho",
+        "maven",
+        "osgi",
+        "plugin-development"
+      ]
+    },
+    {
+      "rank": 14,
+      "name": "ai-engineer-workshop-2026-project",
+      "url": "https://github.com/peterkir/ai-engineer-workshop-2026-project",
+      "description": "AI Engineer Workshop 2026 - Project Template",
+      "primaryLanguages": ["TypeScript", "JavaScript"],
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "AI/ML",
+        "Node.js",
+        "Web Framework"
+      ],
+      "frameworks": [
+        "Node.js",
+        "React or similar modern framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-04-01",
+      "daysOld": 97,
+      "isForked": true,
+      "originalRepository": "mattpocock/ai-engineer-workshop-2026-project",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "ai",
+        "typescript",
+        "workshop",
+        "engineering"
+      ]
+    },
+    {
+      "rank": 15,
+      "name": "copilot-cli-eclipse-plugin",
+      "url": "https://github.com/peterkir/copilot-cli-eclipse-plugin",
+      "description": "A plugin to integrate the GitHub Copilot CLI into Eclipse",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "Eclipse",
+        "Eclipse IDE",
+        "GitHub Copilot",
+        "Java",
+        "Plugin Development",
+        "Eclipse PDE",
+        "CLI"
+      ],
+      "frameworks": [
+        "Eclipse IDE",
+        "Eclipse PDE",
+        "OSGi"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-03-26",
+      "daysOld": 103,
+      "isForked": true,
+      "originalRepository": "laeubi/copilot-cli-eclipse-plugin",
+      "license": "Eclipse Public License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "eclipse",
+        "copilot",
+        "github",
+        "ai",
+        "plugin",
+        "ide"
+      ]
+    },
+    {
+      "rank": 16,
+      "name": "feature-launcher",
+      "url": "https://github.com/peterkir/feature-launcher",
+      "description": "Repository for the feature-launcher OSGi implementation",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "OSGi",
+        "Java",
+        "Feature Launcher",
+        "OSGi Bundle",
+        "Module System"
+      ],
+      "frameworks": [
+        "OSGi Framework",
+        "Java Modules"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-03-10",
+      "daysOld": 119,
+      "isForked": true,
+      "originalRepository": "eclipse-osgi-technology/feature-launcher",
+      "license": "Eclipse Public License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "osgi",
+        "feature-launcher",
+        "java",
+        "module-system"
+      ]
+    },
+    {
+      "rank": 17,
+      "name": "example.javafx",
+      "url": "https://github.com/peterkir/example.javafx",
+      "description": "Example JavaFX application",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "Java",
+        "JavaFX",
+        "GUI Development",
+        "Desktop Application"
+      ],
+      "frameworks": [
+        "JavaFX Framework",
+        "OSGi (possibly)"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-02-20",
+      "daysOld": 138,
+      "isForked": false,
+      "originalRepository": null,
+      "license": "Eclipse Public License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "java",
+        "javafx",
+        "gui",
+        "desktop"
+      ]
+    },
+    {
+      "rank": 18,
+      "name": "oomph",
+      "url": "https://github.com/peterkir/oomph",
+      "description": "Eclipse Oomph - Automated setup and configuration tool for Eclipse IDE",
+      "primaryLanguages": ["Java"],
+      "technologies": [
+        "Eclipse",
+        "Oomph",
+        "IDE Setup Automation",
+        "Java",
+        "Eclipse IDE Configuration",
+        "Workspace Automation"
+      ],
+      "frameworks": [
+        "Eclipse IDE",
+        "Oomph Setup Language"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-02-20",
+      "daysOld": 138,
+      "isForked": true,
+      "originalRepository": "eclipse-oomph/oomph",
+      "license": "Eclipse Public License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "eclipse",
+        "oomph",
+        "automation",
+        "setup",
+        "ide"
+      ]
+    },
+    {
+      "rank": 19,
+      "name": "bnd-workspace-template",
+      "url": "https://github.com/peterkir/bnd-workspace-template",
+      "description": "Workspace template for bnd/bndtools projects",
+      "primaryLanguages": ["Java", "Gradle", "XML"],
+      "technologies": [
+        "bnd/bndtools",
+        "Gradle",
+        "OSGi",
+        "Java",
+        "Build System"
+      ],
+      "frameworks": [
+        "bnd/bndtools",
+        "Gradle Build System",
+        "OSGi Framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-02-17",
+      "daysOld": 141,
+      "isForked": false,
+      "originalRepository": null,
+      "license": "Apache License 2.0",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "bnd",
+        "bndtools",
+        "workspace",
+        "template",
+        "osgi"
+      ]
+    },
+    {
+      "rank": 20,
+      "name": "openclaw",
+      "url": "https://github.com/peterkir/openclaw",
+      "description": "Your own personal AI assistant. Any OS. Any Platform. The lobster way. 🦞",
+      "primaryLanguages": ["TypeScript", "JavaScript"],
+      "technologies": [
+        "TypeScript",
+        "JavaScript",
+        "AI/ML",
+        "LLM",
+        "Cross-platform",
+        "Node.js",
+        "Web Technology"
+      ],
+      "frameworks": [
+        "Node.js",
+        "Web Framework"
+      ],
+      "versions": null,
+      "lastUpdate": "2026-02-17",
+      "daysOld": 141,
+      "isForked": true,
+      "originalRepository": "openclaw/openclaw",
+      "license": "MIT License",
+      "stars": null,
+      "forks": null,
+      "topics": [
+        "ai",
+        "assistant",
+        "typescript",
+        "llm",
+        "cross-platform"
+      ]
+    }
+  ],
+  "summary": {
+    "topLanguages": [
+      "Java",
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "C++"
+    ],
+    "topTechnologies": [
+      "OSGi",
+      "Eclipse IDE",
+      "bnd/bndtools",
+      "VS Code Extension",
+      "AI/ML",
+      "Maven",
+      "Gradle"
+    ],
+    "topFrameworks": [
+      "OSGi Framework",
+      "Eclipse IDE/RCP",
+      "bnd/bndtools",
+      "VS Code Extension API",
+      "Node.js",
+      "Tycho"
+    ],
+    "forkedRepositories": 14,
+    "originalRepositories": 6,
+    "mostRecentUpdate": "2026-07-01",
+    "oldestRecentUpdate": "2026-02-17",
+    "dominantEcosystem": "Eclipse/OSGi/bnd/bndtools",
+    "secondaryFocus": "AI/ML and TypeScript",
+    "thirdFocus": "Java tooling and development"
+  },
+  "notes": {
+    "dataQuality": "Based on GitHub repository listing page analysis",
+    "limitations": [
+      "Detailed version information not available from listing page",
+      "Stars and forks data incomplete in some entries",
+      "Repository descriptions truncated where necessary",
+      "License information only for visible entries",
+      "Specific package/module versions not extracted"
+    ],
+    "recommendations": [
+      "For complete version information, visit each repository's package.json/pom.xml/go.mod files",
+      "For detailed statistics, use GitHub API for comprehensive data",
+      "Consider filtering by language or framework for focused analysis"
+    ]
+  }
+}

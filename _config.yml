@@ -1,4 +1,4 @@
-title: Peter Kirschner
+title: peterkir
 description: >-
   Conference talks and OSGi/Eclipse development resources by Peter Kirschner.
 baseurl: ""
@@ -6,7 +6,7 @@ url: "https://peterkir.github.io"
 
 theme: just-the-docs
 
-color_scheme: light
+color_scheme: nil
 
 search_enabled: true
 search_tokenizer_separator: /[\s/]+/
@@ -23,7 +23,14 @@ aux_links:
     - "https://github.com/peterkir"
 aux_links_new_tab: true
 
-footer_content: ""
+footer_content: "Copyright &copy; 2026 Peter Kirschner. All rights reserved."
+
+sass:
+  quiet_deps: true
+  silence_deprecations:
+    - import
+    - global-builtin
+    - color-functions
 
 exclude:
   - Gemfile.lock

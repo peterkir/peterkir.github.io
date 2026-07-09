@@ -1,0 +1,253 @@
+{
+  "generated_at_utc": "2026-07-07T07:17:59Z",
+  "total_unique": 207,
+  "total_non_fork": 66,
+  "owner_counts": {
+    "klibio": 35,
+    "peterkir": 31
+  },
+  "top_languages": [
+    [
+      "Java",
+      27
+    ],
+    [
+      "n/a",
+      16
+    ],
+    [
+      "Shell",
+      7
+    ],
+    [
+      "HTML",
+      3
+    ],
+    [
+      "JavaScript",
+      3
+    ],
+    [
+      "TypeScript",
+      2
+    ],
+    [
+      "Makefile",
+      2
+    ],
+    [
+      "CSS",
+      1
+    ],
+    [
+      "AspectJ",
+      1
+    ],
+    [
+      "HCL",
+      1
+    ]
+  ],
+  "top20": [
+    {
+      "owner": "klibio",
+      "repo": "example.bnd.rcp",
+      "full_name": "klibio/example.bnd.rcp",
+      "fork": false,
+      "updated_at": "2026-06-25T12:13:41Z",
+      "pushed_at": "2026-06-25T12:13:38Z",
+      "language": "Java",
+      "url": "https://github.com/klibio/example.bnd.rcp"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "lecture-template",
+      "full_name": "peterkir/lecture-template",
+      "fork": false,
+      "updated_at": "2026-06-18T10:22:00Z",
+      "pushed_at": "2026-06-18T10:21:56Z",
+      "language": "HTML",
+      "url": "https://github.com/peterkir/lecture-template"
+    },
+    {
+      "owner": "klibio",
+      "repo": "example.pde.rcp",
+      "full_name": "klibio/example.pde.rcp",
+      "fork": false,
+      "updated_at": "2026-06-05T06:00:27Z",
+      "pushed_at": "2026-07-03T00:13:33Z",
+      "language": "Java",
+      "url": "https://github.com/klibio/example.pde.rcp"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "vscode-bnd-plugin",
+      "full_name": "peterkir/vscode-bnd-plugin",
+      "fork": false,
+      "updated_at": "2026-06-02T05:36:44Z",
+      "pushed_at": "2026-07-01T21:57:59Z",
+      "language": "TypeScript",
+      "url": "https://github.com/peterkir/vscode-bnd-plugin"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "vscode-jdk-config",
+      "full_name": "peterkir/vscode-jdk-config",
+      "fork": false,
+      "updated_at": "2026-04-27T12:52:04Z",
+      "pushed_at": "2026-04-27T12:52:00Z",
+      "language": "TypeScript",
+      "url": "https://github.com/peterkir/vscode-jdk-config"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "bugfix.org.eclipse.paho.mqttv5.client",
+      "full_name": "peterkir/bugfix.org.eclipse.paho.mqttv5.client",
+      "fork": false,
+      "updated_at": "2026-04-13T15:42:01Z",
+      "pushed_at": "2026-04-13T16:37:43Z",
+      "language": "n/a",
+      "url": "https://github.com/peterkir/bugfix.org.eclipse.paho.mqttv5.client"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "peterkir.github.io",
+      "full_name": "peterkir/peterkir.github.io",
+      "fork": false,
+      "updated_at": "2026-04-07T11:37:23Z",
+      "pushed_at": "2026-04-07T13:38:42Z",
+      "language": "JavaScript",
+      "url": "https://github.com/peterkir/peterkir.github.io"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "tycho-example",
+      "full_name": "peterkir/tycho-example",
+      "fork": false,
+      "updated_at": "2026-04-02T18:41:49Z",
+      "pushed_at": "2026-04-02T18:41:45Z",
+      "language": "Java",
+      "url": "https://github.com/peterkir/tycho-example"
+    },
+    {
+      "owner": "klibio",
+      "repo": "apps",
+      "full_name": "klibio/apps",
+      "fork": false,
+      "updated_at": "2026-03-23T14:29:06Z",
+      "pushed_at": "2026-03-26T05:24:40Z",
+      "language": "Java",
+      "url": "https://github.com/klibio/apps"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "ee.j2se-1.8",
+      "full_name": "peterkir/ee.j2se-1.8",
+      "fork": false,
+      "updated_at": "2026-03-11T17:20:46Z",
+      "pushed_at": "2016-11-10T11:03:00Z",
+      "language": "HTML",
+      "url": "https://github.com/peterkir/ee.j2se-1.8"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "ee.j2se-version-11",
+      "full_name": "peterkir/ee.j2se-version-11",
+      "fork": false,
+      "updated_at": "2026-03-11T17:17:41Z",
+      "pushed_at": "2020-04-16T10:54:20Z",
+      "language": "Java",
+      "url": "https://github.com/peterkir/ee.j2se-version-11"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "ee.j2se-1.7",
+      "full_name": "peterkir/ee.j2se-1.7",
+      "fork": false,
+      "updated_at": "2026-03-11T17:16:51Z",
+      "pushed_at": "2015-01-13T15:08:50Z",
+      "language": "Java",
+      "url": "https://github.com/peterkir/ee.j2se-1.7"
+    },
+    {
+      "owner": "klibio",
+      "repo": "mvn.deploy.bnd",
+      "full_name": "klibio/mvn.deploy.bnd",
+      "fork": false,
+      "updated_at": "2026-03-02T14:25:35Z",
+      "pushed_at": "2026-03-02T14:15:05Z",
+      "language": "Shell",
+      "url": "https://github.com/klibio/mvn.deploy.bnd"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "example.javafx",
+      "full_name": "peterkir/example.javafx",
+      "fork": false,
+      "updated_at": "2026-02-20T17:42:22Z",
+      "pushed_at": "2026-02-20T17:42:17Z",
+      "language": "Java",
+      "url": "https://github.com/peterkir/example.javafx"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "bnd-workspace-template",
+      "full_name": "peterkir/bnd-workspace-template",
+      "fork": false,
+      "updated_at": "2026-02-17T16:05:33Z",
+      "pushed_at": "2026-02-17T16:05:05Z",
+      "language": "n/a",
+      "url": "https://github.com/peterkir/bnd-workspace-template"
+    },
+    {
+      "owner": "klibio",
+      "repo": "bootstrap",
+      "full_name": "klibio/bootstrap",
+      "fork": false,
+      "updated_at": "2026-01-19T03:50:29Z",
+      "pushed_at": "2026-03-30T11:12:17Z",
+      "language": "Shell",
+      "url": "https://github.com/klibio/bootstrap"
+    },
+    {
+      "owner": "klibio",
+      "repo": "mvn.deploy.java",
+      "full_name": "klibio/mvn.deploy.java",
+      "fork": false,
+      "updated_at": "2026-01-04T18:54:50Z",
+      "pushed_at": "2026-01-04T18:54:46Z",
+      "language": "Java",
+      "url": "https://github.com/klibio/mvn.deploy.java"
+    },
+    {
+      "owner": "klibio",
+      "repo": "cdn",
+      "full_name": "klibio/cdn",
+      "fork": false,
+      "updated_at": "2025-12-02T05:58:04Z",
+      "pushed_at": "2025-12-17T06:20:51Z",
+      "language": "CSS",
+      "url": "https://github.com/klibio/cdn"
+    },
+    {
+      "owner": "peterkir",
+      "repo": "ece2016",
+      "full_name": "peterkir/ece2016",
+      "fork": false,
+      "updated_at": "2025-07-18T06:15:35Z",
+      "pushed_at": "2025-07-18T08:07:00Z",
+      "language": "Java",
+      "url": "https://github.com/peterkir/ece2016"
+    },
+    {
+      "owner": "klibio",
+      "repo": "docker-eclipse",
+      "full_name": "klibio/docker-eclipse",
+      "fork": false,
+      "updated_at": "2024-04-06T00:12:05Z",
+      "pushed_at": "2022-12-06T06:03:46Z",
+      "language": "Shell",
+      "url": "https://github.com/klibio/docker-eclipse"
+    }
+  ]
+}
