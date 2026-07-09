@@ -39,6 +39,7 @@ exclude:
   - Gemfile.lock
   - vendor/
   - node_modules/
+  - 201410_EclipseCon_Europe/
   - "201410_EclipseCon_Europe/presentation/node_modules/"
   - "201410_EclipseCon_Europe/presentation/test/"
   - doc/

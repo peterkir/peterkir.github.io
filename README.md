@@ -86,6 +86,7 @@ The generated website is written to the `_site/` directory.
 
 - `baseurl` is currently set to an empty string in [_config.yml](_config.yml), which is correct for root-domain hosting.
 - If you host the site under a subpath, update `baseurl` accordingly.
+- In CI deployment, `201410_EclipseCon_Europe/` is excluded from Jekyll processing in [_config.yml](_config.yml) and then copied into `_site/` by [.github/workflows/deploy.yml](.github/workflows/deploy.yml) so it is still published on GitHub Pages.
 
 ## Project Conventions
 
