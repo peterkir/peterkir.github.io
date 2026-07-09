@@ -37,6 +37,8 @@ sass:
 
 exclude:
   - Gemfile.lock
+  - agent.md
+  - agents.md
   - vendor/
   - node_modules/
   - 201410_EclipseCon_Europe/
